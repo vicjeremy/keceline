@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote</title>
+    <link rel="stylesheet" href="css/quote.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="assets\images\navbar\logo-perusahaan.png" alt="Logo"> <!-- Add your logo image -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="office.html">OUR OFFICES</a></li>
+                <li><a href="careers.html">CAREERS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <div class="vl"></div>
+        <a href="login.html" class="login">LOGIN</a>
+    </header>
+
+    <div class="gr-box">  
+        <div class="background">
+            <p>Get a Quote</p>
+        </div>
+        <hr class="horizontal-line">
+
+        <div class="container">
+            <div class="header">Get your quotes</div>
+            <div class="tabs">
+                <div class="tab active">Origin and Destination</div>
+                <div class="tab">Shipment Details</div>
+                <div class="tab">Select Services</div>
+                <div class="tab">Add-Ons</div>
+                <div class="tab">Your Contact Details</div>
+            </div>
+            <div class="form-group">
+                <label for="from">From</label>
+                <select id="from">
+                    <option>Shanghai, China</option>
+                </select>
+                <i class="fas fa-exchange-alt swap-icon"></i>
+                <label for="to">To</label>
+                <select id="to">
+                    <option>Semarang, Indonesia</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" value="2024-02-23">
+            </div>
+            <div class="form-group">
+                <label for="method">Method</label>
+                <select id="method">
+                    <option>By Sea</option>
+                </select>
+            </div>
+            <div class="next-button">
+                <a href="quote_shipment.html">
+                <button>Next <i class="fas fa-arrow-right"></i></button>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-col">
+                <div class="img-footer">
+                    <img src="assets\images\navbar\logo-perusahaan.png" alt="Logo" height="70px" width="150px">
+                </div>
+                <p>Get the latest news about<br>shipment, cargo and delivery.</p>
+                <div class="subscribe-container">
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="about.html">About</a>
+                <a href="news.html">News</a>
+                <a href="office.html">Our Offices</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="register.html">New Customer Center</a>
+                <!-- Horizontal Line Below Quick Links -->
+                <hr class="horizontal-line-footer">
+                <!-- Terms and Privacy Policy Links -->
+                <div class="terms">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        
+            <div class="footer-col">
+                <h4>Services</h4>
+                <p>Sea Freight</p>
+                <p>Air Freight</p>
+                <p>Rail Transport</p>
+                <p>Land Transport</p>
+                <p>3PL</p>
+            </div>
+        
+            <!-- Social Media Icons Positioned Horizontally -->
+            <div class="footer-social">
+                <a href="#"><img src="assets\images\footer\instagram.png" alt="Instagram" height="20px" width="20px"></a>
+            <a href="#"><img src="assets\images\footer\facebook.png" alt="Facebook" height="20px" width="20px"></a>
+            <a href="#"><img src="assets\images\footer\twitterx.png" alt="X" height="16px" width="16px"></a>
+            <a href="#"><img src="assets\images\footer\linkedin.png" alt="LinkedIn" height="20px" width="20px"></a>
+            <a href="#"><img src="assets\images\footer\youtube.png" alt="YouTube" height="15px" width="20px"></a>
+            </div>
+        </div>
+
+       <div class="floating-button" onclick="buttonAction()">
+            <i class="fas fa-comments"></i> <!-- You can replace with an SVG or Font Awesome icon -->
+        </div>
+    </div>
+    </div>
+
+</body>
