@@ -61,7 +61,7 @@ header nav ul li a {
 }
 
 .background {
-    background-image: url('/assets/images/careers/hand.png');
+    background-image: url('../assets/images/careers/hand.png');
     background-size: cover;
     background-position: center;
     height: 600px;
@@ -105,13 +105,12 @@ header nav ul li a {
 
 .gr-box {
     background-color: #f9f9f9;
-    background-size: cover;
-    background-position: center;
-    /*position: absolute;
-    top:90%;*/
-    top:auto;
-    height: 200px;
-    width: 100%;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsif */
+    gap: 20px; /* Jarak antar elemen */
+    box-sizing: border-box;
+    align-items: start;
+    text-align: left;
 }
 
 .background-2 {
@@ -363,15 +362,23 @@ header nav ul li a {
     background-color: #f0f0f0;
 }
 
-.gr-box-2 {
+/* .gr-box-2 {
     background-color: #f9f9f9;
     background-size: cover;
     background-position: center;
-    /*position: absolute;
-    top:90%;*/
     margin-top:1vh;
     height: 80vh;
     width: 100%;
+} */
+
+.gr-box-2 {
+    background-color: #f9f9f9;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsif */
+    gap: 20px; /* Jarak antar elemen */
+    box-sizing: border-box;
+    align-items: start;
+    text-align: left;
 }
 
 .background-4 {

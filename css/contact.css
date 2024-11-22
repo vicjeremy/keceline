@@ -60,85 +60,72 @@ header nav ul li a {
     text-decoration: none;
 }
 
-.gr-box{
+.gr-box {
     background-color: #f3f3f3;
     background-size: cover;
     background-position: center;
-    position: absolute;
-    top:12%;
-    height: 900px;
+    position: relative; /* Ganti dari absolute agar lebih fleksibel */
+    top: 10vh;
+    height: auto; /* Sesuaikan otomatis dengan konten */
+    min-height: 900px;
     width: 100%;
+    padding: 20px; /* Tambahkan padding untuk jarak */
+    box-sizing: border-box;
 }
 
 .background-pg-2 {
-    display: flex; 
-    justify-content: flex-start; 
-    align-items: center; 
-    height: 100px; 
-    padding: 0 20px;
-    position: absolute;
-    top: 0%; 
-    left: 10%; 
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Rata tengah teks */
+    margin-bottom: 20px; 
     font-size: 32px; 
     color: black; 
 }
 
 .horizontal-line-pg {
-    position: absolute;
-    left: -65%; 
-    width: 630%; 
-    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
-    top: 100%;
+    width: 100%; /* Sesuaikan panjang garis */
+    border: 1px solid #ccc;
+    margin: 10px auto; /* Rata tengah */
 }
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    position: absolute;
-    top:30%;
-    gap: 2rem; 
-    padding: 2rem; 
-    margin: 0 auto;
-}
-
-.img-class{
-    position: absolute;
-    top: 20%; 
-    left: 5%; 
+.img-class {
+    display: block; /* Tambahkan block untuk penyesuaian */
+    margin: 0 auto; /* Pusatkan gambar */
+    max-width: 90%; /* Batasi lebar agar tidak melampaui kontainer */
+    height: auto;
+    border-radius: 8px; /* Tambahkan efek radius */
 }
 
 .form-container {
     background-color: transparent;
-    position: absolute;
-    top:15%;
-    right: 5%;
+    margin: 0 auto;
     padding: 20px;
     border-radius: 8px;
     width: 100%;
     max-width: 500px;
+    box-sizing: border-box; /* Pastikan padding dihitung */
 }
 
 form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .form-row {
     display: flex;
+    flex-direction: column; /* Default untuk perangkat kecil */
     gap: 10px;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-    width: 100%;
+@media (min-width: 768px) {
+    .form-row {
+        flex-direction: row; /* Ubah menjadi baris untuk perangkat lebih besar */
+    }
 }
 
-.form-group label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #333;
+.form-group {
+    width: 100%;
 }
 
 .form-group input[type="text"],
@@ -151,15 +138,6 @@ form {
     border-radius: 4px;
     font-size: 16px;
     width: 100%;
-}
-
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group input[type="tel"]:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: #006400;
-    outline: none;
 }
 
 .form-group textarea {
@@ -185,75 +163,72 @@ form {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 100%; /* Responsif */
 }
 
 .form-group button:hover {
     background-color: #004d00;
 }
 
+@media (min-width: 1024px) {
+    .img-class {
+        float: left; /* Gambar ke kiri */
+        margin-right: 20px;
+        max-width: 40%;
+    }
+
+    .form-container {
+        float: right;
+        max-width: 50%; /* Pastikan tidak melebihi kontainer */
+    }
+}
+
+
 .background-pg {
-    background-image: url('/assets/images/about/industrial.jpg');
+    background-image: url('../assets/images/about/industrial.jpg');
     background-size: cover;
     background-position: center;
     height: 600px;
     width: 100%;
-    background-repeat: no-repeat;
-    position: absolute;
-    top:145vh; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.text {
-    max-width: 60%;
+.overlay {
+    text-align: center;
     color: #fff;
-    margin-top: 10%;
-    margin-left: 35%;
-    transform: translateY(-50%);
+}
+
+.text-ab h2 {
     font-size: 40px;
-    max-width: 60%;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.background {
-    display: flex; 
-    justify-content: flex-start; 
-    align-items: center; 
-    height: 300px; 
-    padding: 0 20px;
-    position: absolute;
-    bottom: 30%; 
-    left: 35%; 
-    font-size: 32px; 
-    color: black; 
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
 }
 
-.img-text {
-    max-width: 200%;
+.option {
+    text-align: center;
     color: #fff;
-    margin-top: 10rem;
-    margin-left: -6.5rem;
-    transform: translateY(-50%);
-    font-size: 23px;
 }
 
-.background-2 {
-    display: flex; 
-    justify-content: flex-start; 
-    align-items: center; 
-    height: 300px; 
-    padding: 0 20px;
-    position: absolute;
-    bottom: 30%; 
-    right: 30%; 
-    font-size: 32px; 
-    color: black; 
+.option-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
 }
 
-.img-text-2 {
-    max-width: 200%;
-    color: #fff;
-    margin-top: 10rem;
-    margin-left: -8rem;
-    transform: translateY(-50%);
+.option p {
     font-size: 23px;
+    font-weight: bold;
+    margin: 0;
 }
 
 .footer {
@@ -264,7 +239,6 @@ form {
     flex-wrap: wrap;
     width: 100%;
     position: relative;
-    top: 230vh;
 }
 
 .footer-col {

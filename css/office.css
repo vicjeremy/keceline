@@ -59,7 +59,7 @@ header nav ul li a {
     text-decoration: none;
 }
 .background-pg {
-    background-image: url('/assets/images/offices/office.png');
+    background-image: url('../assets/images/offices/office.png');
     background-size: cover;
     background-position: center;
     height: 600px;
@@ -74,7 +74,7 @@ header nav ul li a {
     text-align: center;
     border-radius: 10px; 
     width:63.5%;
-    height:28%;
+    height:30%;
     color: #fff; 
     position: absolute; 
     top: 50%; 
@@ -97,164 +97,58 @@ header nav ul li a {
 }
 
 
-.box{
+.box {
     background-color: #fff;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top:90%;
-    height: 300px;
-    width: 100%;   
+    width: 100%;
+    padding: 20px; /* Beri jarak agar elemen tidak menempel */
+    box-sizing: border-box;
 }
 
-
 .background-pg-2 {
-    display: flex; 
-    justify-content: flex-start; 
-    align-items: center; 
-    height: 100px; 
-    padding: 0 20px;
-    position: absolute;
-    top: -3%; 
-    left: 10%; 
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Rata tengah teks */
+    margin-bottom: 20px; 
     font-size: 32px; 
     color: black; 
 }
 
 .horizontal-line-pg {
-    position: absolute;
-    left: -65%; 
-    width: 630%; 
-    border-top: 0px solid black; 
-    top: 100%;
+    width: 100%; /* Sesuaikan panjang garis */
+    border: 1px solid #ccc;
+    margin: 10px auto; /* Rata tengah */
 }
 
 .features {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem; 
-    padding: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-.img-class{
-    position: absolute;
-    top: 50%; 
-    left: 10%; 
-}
-
-.img-class-2{
-    position: absolute;
-    top: 50%; 
-    left: 43%; 
-}
-
-.img-class-3{
-    position: absolute;
-    top: 50%; 
-    right: 10%; 
-}
-
-.text-img{
+.feature {
     text-align: left;
-    max-width: 60%;
-    color: #006400;
-    position: absolute;
-    top: 140%; 
-    left: 10%;
-    transform: translateY(-50%);
-    font-size: 24px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 8px;
 }
 
-.text-img-1{
-    text-align: left;
-    max-width: 60%;
-    color: #006400;
-    position: absolute;
-    top: 140%; 
-    left: 43%;
-    transform: translateY(-50%);
-    font-size: 24px;
+.feature img {
+    width: 100%;
+    height: auto;
+    max-height: 240px; /* Batasi tinggi gambar */
+    margin-bottom: 15px;
+    border-radius: 5px;
 }
 
-.text-img-2{
-    text-align: left;
-    max-width: 60%;
-    color: #006400;
-    position: absolute;
-    top: 140%; 
-    left: 74%;
-    transform: translateY(-50%);
-    font-size: 24px;
+.text-img, .text-desc, .sub-desc {
+    margin-bottom: 10px;
+    font-size: 16px; /* Ukuran font responsif */
 }
 
-.text-desc{
-    text-align: left;
-    max-width: 60%;
-    color: #000;
-    position: absolute;
-    top: 155%; 
-    left: 10%;
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.sub-desc{
-    text-align: left;
-    max-width: 60%;
-    color: #000;
-    position: absolute;
-    top: 180%; 
-    left: 10%;
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.text-desc-1{
-    text-align: left;
-    max-width: 60%;
-    color: #000;
-    position: absolute;
-    top: 155%; 
-    left: 43%;
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.sub-desc-11{
-    text-align: left;
-    max-width: 60%;
-    color: #000;
-    position: absolute;
-    top: 180%; 
-    left: 43%;
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.text-desc-2{
-    text-align: left;
-    max-width: 60%;
-    color: #000;
-    position: absolute;
-    top: 155%; 
-    right: 11%;
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.sub-desc-22{
-    text-align: left;
-    max-width: 60%;
-    color: #000;
-    position: absolute;
-    top: 180%; 
-    left: 74%;
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.button {
+.button, .button-1, .button-2 {
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
@@ -266,100 +160,68 @@ header nav ul li a {
     font-size: 16px;
     background-color: #fff;
     cursor: pointer;
-    position: absolute;
-    top: 200%; 
-    left: 10%;
+    transition: background-color 0.3s ease;
 }
-.button i {
+
+.button:hover, .button-1:hover, .button-2:hover {
+    background-color: #006400;
+    color: #fff;
+}
+
+.button i, .button-1 i, .button-2 i{
     margin-left: 10px;
 }
 
-.button-1 {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #000;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    background-color: #fff;
-    cursor: pointer;
-    position: absolute;
-    top: 200%; 
-    left: 43%;
+/* Media Query untuk layar kecil */
+@media (max-width: 768px) {
+    .background-pg-2 {
+        font-size: 24px; 
+    }
+    .text-img, .text-desc, .sub-desc {
+        font-size: 14px;
+    }
+    .button, .button-1, .button-2 {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
 }
 
-.button-1 i {
-    margin-left: 10px;
-}
-
-.button-2 {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #000;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    background-color: #fff;
-    cursor: pointer;
-    position: absolute;
-    top: 200%; 
-    right: 13.5%;
-}
-
-.button-2 i {
-    margin-left: 10px;
-}
-
-.gr-box{
+.gr-box {
     background-color: #d3d3d3;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top:200%;
-    height: 300px;
-    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsif */
+    gap: 20px; /* Jarak antar elemen */
+    box-sizing: border-box;
+    align-items: start;
+    text-align: left;
 }
 
-.text-box{
-    text-align: left;
-    max-width: 60%;
+.text-box, .text-box-1, .text-box-2 {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.text-box b p, .text-box-1 b p, .text-box-2 b p {
     color: #006400;
-    position: absolute;
-    top: 10%; 
-    left: 10%;
-    transform: translateY(-50%);
     font-size: 24px;
+    margin: 0 0 10px;
 }
 
-.text-boxdesc{
-    text-align: left;
-    width: 250%;
-    color: #000;
-    position: absolute;
-    top: 230%; 
-    left: 0%;
-    transform: translateY(-50%);
+.text-boxdesc, .text-boxdesc-1, .text-boxdesc-2 {
     font-size: 15px;
-}
-
-.sub-boxdesc{
-    text-align: left;
-    width: 450%;
     color: #000;
-    position: absolute;
-    top: 490%; 
-    left: 0%;
-    transform: translateY(-50%);
-    font-size: 15px;
+    margin-bottom: 10px;
 }
 
-.button-3 {
+.sub-boxdesc, .sub-boxdesc-1, .sub-boxdesc-2 {
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.button-3, .button-4, .button-5 {
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
@@ -371,50 +233,64 @@ header nav ul li a {
     font-size: 16px;
     background-color: #fff;
     cursor: pointer;
-    position: absolute;
-    top: 140%; 
-    left: 0%;
-    width: 28%;
+    transition: background-color 0.3s ease;
 }
 
-.button-3 i {
+.button-3:hover, .button-4:hover, .button-5:hover {
+    background-color: #006400;
+    color: #fff;
+}
+
+.button-3 i, .button-4 i, .button-5 i {
     margin-left: 10px;
 }
 
-.text-box-1{
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .text-box b p, .text-box-1 b p, .text-box-2 b p {
+        font-size: 20px;
+    }
+    .text-boxdesc, .text-boxdesc-1, .text-boxdesc-2,
+    .sub-boxdesc, .sub-boxdesc-1, .sub-boxdesc-2 {
+        font-size: 14px;
+    }
+    .button-3, .button-4, .button-5 {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+.wh-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.branch {
+    flex: 1 1 calc(33.333% - 40px); /* 3 items per row with spacing */
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
     text-align: left;
-    max-width: 60%;
+}
+
+.branch h3 {
     color: #006400;
-    position: absolute;
-    top: 10%; 
-    left: 40%;
-    transform: translateY(-50%);
-    font-size: 24px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
 }
 
-.text-boxdesc-1{
-    text-align: left;
-    width: 250%;
-    color: #000;
-    position: absolute;
-    top: 230%; 
-    left: 0%;
-    transform: translateY(-50%);
-    font-size: 15px;
+.branch p {
+    color: #333;
+    font-size: 1em;
+    margin: 5px 0;
 }
 
-.sub-boxdesc-1{
-    text-align: left;
-    width: 450%;
-    color: #000;
-    position: absolute;
-    top: 490%; 
-    left: 0%;
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.button-4 {
+.button-6, .button-7, .button-8 {
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
@@ -426,279 +302,58 @@ header nav ul li a {
     font-size: 16px;
     background-color: #fff;
     cursor: pointer;
-    position: absolute;
-    top: 170%; 
-    left: 0%;
-    width: 36%;
+    transition: background-color 0.3s ease;
 }
 
-.button-4 i {
+.button-6:hover, .button-7:hover, .button-8:hover {
+    background-color: #006400;
+    color: #fff;
+}
+
+.button-6 i, .button-7 i, .button-8 i {
     margin-left: 10px;
 }
-
-.text-box-2{
-    text-align: left;
-    max-width: 60%;
-    color: #006400;
-    position: absolute;
-    top: 10%; 
-    right: 20%;
-    transform: translateY(-50%);
-    font-size: 24px;
+@media (max-width: 768px) {
+    .branch {
+        flex: 1 1 calc(50% - 40px); /* 2 items per row for tablets */
+    }
 }
 
-.text-boxdesc-2{
-    text-align: left;
-    width: 350%;
-    color: #000;
-    position: absolute;
-    top: 230%; 
-    left: 0%;
-    transform: translateY(-50%);
-    font-size: 15px;
+@media (max-width: 480px) {
+    .branch {
+        flex: 1 1 100%; /* Single column for mobile */
+    }
 }
 
-.sub-boxdesc-2{
-    text-align: left;
-    width: 250%;
-    color: #000;
-    position: absolute;
-    top: 490%; 
-    left: 0%;
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.button-5 {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #000;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    background-color: #fff;
-    cursor: pointer;
-    position: absolute;
-    top: 120%; 
-    left: 0%;
-    width: 90%;
-}
-
-.button-5 i {
-    margin-left: 10px;
-}
-
-.wh-box{
-    background-color: #fff;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top:245%;
-    height: 300px;
-    width: 100%;
-}
-
-.text-box-wh{
-    text-align: left;
-    max-width: 60%;
-    color: #006400;
-    position: absolute;
-    top: 10%; 
-    left: 10%;
-    transform: translateY(-50%);
-    font-size: 24px;
-}
-
-.text-boxwh{
-    text-align: left;
-    width: 250%;
-    color: #000;
-    position: absolute;
-    top: 230%; 
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.sub-boxwh{
-    text-align: left;
-    width: 450%;
-    color: #000;
-    position: absolute;
-    top: 490%; 
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.button-6 {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #000;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    background-color: #fff;
-    cursor: pointer;
-    position: absolute;
-    top: 120%; 
-    left: 0%;
-    width: 36%;
-}
-
-.button-6 i {
-    margin-left: 10px;
-}
-
-.text-box-wh-2{
-    text-align: left;
-    max-width: 60%;
-    color: #006400;
-    position: absolute;
-    top: 10%; 
-    left: 40%;
-    transform: translateY(-50%);
-    font-size: 24px;
-}
-
-.text-boxwh-2{
-    text-align: left;
-    width: 450%;
-    color: #000;
-    position: absolute;
-    top: 230%; 
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.sub-boxwh-2{
-    text-align: left;
-    width: 550%;
-    color: #000;
-    position: absolute;
-    top: 490%; 
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.button-7 {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #000;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    background-color: #fff;
-    cursor: pointer;
-    position: absolute;
-    top: 120%; 
-    left: 0%;
-    width: 65%;
-}
-
-.button-7 i {
-    margin-left: 10px;
-}
-
-.text-box-wh-3{
-    text-align: left;
-    max-width: 60%;
-    color: #006400;
-    position: absolute;
-    top: 10%; 
-    right: 18%;
-    transform: translateY(-50%);
-    font-size: 24px;
-}
-
-.text-boxwh-3{
-    text-align: left;
-    width: 300%;
-    color: #000;
-    position: absolute;
-    top: 230%; 
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.sub-boxwh-3{
-    text-align: left;
-    width: 300%;
-    color: #000;
-    position: absolute;
-    top: 490%; 
-    transform: translateY(-50%);
-    font-size: 15px;
-}
-
-.button-8 {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #000;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    background-color: #fff;
-    cursor: pointer;
-    position: absolute;
-    top: 120%; 
-    left: 0%;
-    width: 58%;
-}
-
-.button-8 i {
-    margin-left: 10px;
-}
 
 .gr-box-2{
     background-color: #d3d3d3;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top:287%;
-    height: 260px;
-    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsif */
+    gap: 20px; /* Jarak antar elemen */
+    box-sizing: border-box;
+    align-items: start;
+    text-align: left;
 }
 
 .text-box-gr{
-    text-align: left;
-    max-width: 60%;
-    color: #006400;
-    position: absolute;
-    top: 10%; 
-    left: 10%;
-    transform: translateY(-50%);
-    font-size: 24px;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    width: 32%;
 }
 
 .text-boxgr{
-    text-align: left;
-    width: 350%;
-    color: #000;
-    position: absolute;
-    top: 230%; 
-    transform: translateY(-50%);
     font-size: 15px;
+    color: #000;
+    margin-bottom: 10px;
 }
 
 .sub-boxgr{
-    text-align: left;
-    width: 450%;
-    color: #000;
-    position: absolute;
-    top: 490%; 
-    transform: translateY(-50%);
     font-size: 15px;
+    color: #000;
+    margin-bottom: 15px;
 }
 
 .button-9 {
@@ -713,10 +368,13 @@ header nav ul li a {
     font-size: 16px;
     background-color: #fff;
     cursor: pointer;
-    position: absolute;
-    top: 120%; 
-    left: 0%;
-    width: 57%;
+    transition: background-color 0.3s ease;
+    margin-top: 2vh;
+}
+
+.button-9:hover{
+    background-color: #006400;
+    color: #fff;
 }
 
 .button-9 i {
@@ -724,29 +382,35 @@ header nav ul li a {
 }
 
 /* Gambar latar belakang */
+/* Base styling */
 .background-office {
-    background-image: url('/assets/images/offices/wh-off.png');
+    background-image: url('../assets/images/offices/wh-off.png');
     background-size: cover;
     background-position: center;
-    margin-top: 123%;
     height: 600px;
     width: 100%;
     background-repeat: no-repeat;
-    position: relative; 
+    position: relative; /* For positioning child elements */
 }
 
 .wh-square {
-    background-color: #fff; 
+    background-color: #fff;
     padding: 40px;
-    text-align: center;
-    border-radius: 10px; 
-    width:63.5%;
-    height:40%;
-    color: #000; 
-    position: absolute; 
-    top: 40%; 
-    left: 30%;
-    transform: translate(-50%, -50%);
+    text-align: left;
+    border-radius: 10px;
+    width: 60%; /* Adjust as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: absolute; /* Allow positioning */
+    top: 50%; /* Vertically centered */
+    left: 0%; /* Positioned in the left corner */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+}
+
+.text-office {
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 .underline {
@@ -755,26 +419,85 @@ header nav ul li a {
 }
 
 .text-office-2 {
-    position: absolute;
-    top:60%;
-    text-align: left;
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 .sub-text-office {
-    text-align: right;
-    max-width: 60%;
-    color: #00000080;
-    text-decoration: none;
-    position: absolute;
-    bottom: 10%; 
-    right: 5%;
-    transform: translateY(-50%);
+    margin-top: 20px;
 }
 
-.sub-text-office a {
-    color: #00000080;
+.button-get-in-touch {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #249300;
+    border-radius: 5px;
     text-decoration: none;
+    color: #249300;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
 }
+
+.button-get-in-touch:hover {
+    background-color: #249300;
+    color: #fff;
+}
+
+.button-get-in-touch i {
+    margin-left: 8px;
+}
+
+/* Responsive Design: Tablet and Smaller */
+@media (max-width: 1024px) {
+    .background-office {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 30px;
+    }
+
+    .wh-square {
+        width: 50%; /* Adjust width for smaller screens */
+    }
+
+    .text-office {
+        font-size: 1.5em;
+    }
+
+    .text-office-2 {
+        font-size: 0.95em;
+    }
+}
+
+/* Responsive Design: Mobile */
+@media (max-width: 768px) {
+    .background-office {
+        height: auto;
+        padding: 20px;
+    }
+
+    .wh-square {
+        width: 90%; /* Full width on small screens */
+        left: 5%; /* Maintain margin */
+        padding: 20px;
+    }
+
+    .text-office {
+        font-size: 1.3em;
+    }
+
+    .text-office-2 {
+        font-size: 0.9em;
+    }
+
+    .button-get-in-touch {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
 
 .footer {
     background-color: #fff;

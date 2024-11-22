@@ -61,7 +61,7 @@ header nav ul li a {
 }
 
 .background {
-    background-image: url('/assets/images/about/industrial.jpg');
+    background-image: url('../assets/images/about/industrial.jpg');
     background-size: cover;
     background-position: center;
     height: 600px;
@@ -375,7 +375,7 @@ header nav ul li a {
 
 /* Gambar latar belakang */
 .background-20 {
-    background-image: url('/assets/images/about/industrial.jpg');
+    background-image: url('../assets/images/about/industrial.jpg');
     background-size: cover;
     background-position: center;
     margin-top: 241%;
@@ -440,7 +440,7 @@ header nav ul li a {
 }
 
 .background-pg {
-    background-image: url('/assets/images/about/industrial.jpg');
+    background-image: url('../assets/images/about/industrial.jpg');
     background-size: cover;
     background-position: center;
     height: 600px;

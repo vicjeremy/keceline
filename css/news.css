@@ -295,7 +295,7 @@ header p {
 /* footer  */
 /* Gambar latar belakang */
 .background-20 {
-    background-image: url('/assets/images/about/industrial.jpg');
+    background-image: url('../assets/images/about/industrial.jpg');
     background-size: cover;
     background-position: center;
     height: 80vh;
