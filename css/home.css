@@ -80,14 +80,14 @@ html
 
 /* home */
 .hero {
-    height: 95vh;
+    height: 98vh;
     background: url('../assets/images/home/Port1.png') center/cover;
     color: white;
     padding: 5vh 0;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 1000px;
 }
 .hero-text{
     display: flex;
@@ -122,18 +122,20 @@ html
     align-items: center;
     justify-content: center;
     max-width: 1200px;
+/*    overflow: hidden;*/
 }
 .search-container h1 {
     color:#000;
     font-size: 1.2rem;
     text-align: left;
-    padding: 2%;
+    padding: 1.5%;
     margin: 0%;
 }
 .tabs {
-    position: static;
+/*    position: static;*/
     display: flex;
     gap: 2rem;
+    color: var(--grey-color);
     margin-bottom: 1.5rem;
 }
 
@@ -141,19 +143,42 @@ html
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--grey-color);
+    padding: 10px 10px;
     cursor: pointer;
+    border-radius: 4px; 
+    margin-right: 10px;
 }
 
 .tab.active {
     color: var(--green-color);
+    text-decoration-line: underline;
     font-weight: bold;
+}
+.content-section {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.content-section.active {
+    display: block;
 }
 
 .tab i {
     font-size: 1.2rem;
 }
-
+.quote p {
+    color: black;
+    margin-left: -0.8rem;
+}
+.quote button{
+    border: none;
+    background: transparent;
+    font-size: 12pt;
+    margin-top: 2rem;
+    margin-left: 18vw;
+}
 .search-form {
     display: grid;
     grid-template-columns: repeat(4, 1fr) auto;
@@ -166,14 +191,32 @@ html
     border-radius: 4px;
     width: 100%;
 }
-
-.search-btn {
+.track input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-left: 1.5rem;
+    width: 25vw;
+}
+.track p {
+    color: black;
+    font-size: 10pt;
+    padding: 0;
+    margin-left: 1.5rem;
+}
+.rates-btn {
     background: var(--green-color);
     color: white;
     border: none;
     border-radius: 4px;
     padding: 0.8rem 1.5rem;
     cursor: pointer;
+}
+.track-btn {
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: var(--green-color);
+    color: white;
 }
 
 /* chat */

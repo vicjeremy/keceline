@@ -30,52 +30,105 @@
     <div class="hero">
         <div class="hero-content">
             <div class="hero-text hro">
-            <h1>All-Around<br>Logistic Excellence</h1>
-            <p>Unleashing Excellence Through Our Diverse Service Offerings</p>
-        </div>
+                <h1>All-Around<br>Logistic Excellence</h1>
+                <p>Unleashing Excellence Through Our Diverse Service Offerings</p>
+            </div>
         </div>
 
         <div class="search-container">
+
+            <!-- navigation -->
             <div class="tabs">
-                <div class="tab active">
+                <div class="tab active" onclick="switchTab('rates')">
                     <i class="fas fa-calculator"></i>
-                    <a href="#">Rates</a>
+                    Rates
                 </div>
-                <div class="tab">
+                <div class="tab" onclick="switchTab('tracking')">
                     <i class="fas fa-map-marker-alt"></i>
-                    <a href="#">Tracking</a>
+                    Tracking
                 </div>
-                <div class="tab">
+                <div class="tab" onclick="switchTab('schedule')">
                     <i class="far fa-calendar-alt"></i>
-                    <a href="#">Schedule</a>
+                    Schedule
                 </div>
-                <div class="tab">
+                <div class="tab" onclick="switchTab('quote')">
                     <i class="fas fa-quote-right"></i>
-                    <a href="#">Get a Quote</a>
+                    Get a Quote
                 </div>
             </div>
-            <h1><strong>Get Instant Rates in a few steps</strong></h1>
-            <form class="search-form">
-                
-                <select>
-                    <option>Select City,Country</option>
-                </select>
-                <select>
-                    <option>Select City,Country</option>
-                </select>
-                <select>
-                    <option>Select Dates</option>
-                </select>
-                <select>
-                    <option>Select Service</option>
-                </select>
-                <button type="submit" class="search-btn">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
+
+            <!-- Rates -->
+            <div id="rates" class="content-section active">
+                <h1><strong>Get Instant Rates in a few steps</strong></h1>
+                <form class="search-form">
+                    <select>
+                        <option selected="true" disabled="true">Select From City,Country</option>
+                        <option value="Jakarta">Jakarta</option>
+                        <option value="Surabaya">Surabaya</option>
+                        <option value="Bandung">Bandung</option>
+                    </select>
+                    <select>
+                        <option selected="true" disabled="true">Select To City,Country</option>
+                        <option value="Bali">Bali</option>
+                        <option value="Yogyakarta">Yogyakarta</option>
+                        <option value="Medan">Medan</option>
+                    </select>
+                        <input type="date" id="departureDate">
+                    <select>
+                        <option selected="true" disabled="true">Select Service</option>
+                        <option value="mobil">express</option>
+                        <option value="truck">normal</option>
+                        <option value="kapal">by sea</option>
+                    </select>
+                    <button class="rates-btn" onclick="checkPrice()"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+
+            <!-- Tracking -->
+            <div id="tracking" class="content-section track">
+                <h1><strong>Tracks Your Shipment</strong></h1>
+                <p>Separate more numbers with commas</p>
+                <input type="text" name="" placeholder="Insert Tracking Number">
+                <button class="track-btn" onclick="checkPrice()">Search Now <i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Schedule -->
+            <div id="schedule" class="content-section">
+                    <h1><strong>Check Schedule Availability</strong></h1>
+                    <form class="search-form">
+                        <select>
+                            <option selected="true" disabled="true">Select From City,Country</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Surabaya">Surabaya</option>
+                            <option value="Bandung">Bandung</option>
+                        </select>
+                        <select>
+                            <option selected="true" disabled="true">Select To City,Country</option>
+                            <option value="Bali">Bali</option>
+                            <option value="Yogyakarta">Yogyakarta</option>
+                            <option value="Medan">Medan</option>
+                        </select>
+                            <input type="date" id="departureDate">
+                        <select>
+                            <option selected="true" disabled="true">Select Service</option>
+                            <option value="mobil">express</option>
+                            <option value="truck">normal</option>
+                            <option value="kapal">by sea</option>
+                        </select>
+                        <button class="rates-btn" onclick="checkPrice()"><i class="fas fa-search"></i></button>
+                    </form>
+            </div>
+
+            <!-- Quote -->
+            <div id="quote" class="content-section">
+                <div class="cta-ca quote">
+                    <p>Start your logistic journey with us and <br> experience the smooth and trusted flow from end <br> to end on one integrated system.</p>
+                    <button>Get A Quote →</button>
+                </div>
+            </div>
+
         </div>
     </div>
-
     <!-- services -->
     <div class="services-container">
         <div class="services-content">
@@ -302,5 +355,7 @@
     <a href="#"></a><div class="chat-button">
         <i class="fas fa-comments"></i>
     </div></a>
+
+    <script type="text/javascript" src="js/home.js"></script>
 </body>
 </html>
