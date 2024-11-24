@@ -1,4 +1,9 @@
 function switchTab(tabId) {
+    document.querySelectorAll('.hero').forEach(hero => {
+        hero.classList.remove('hero4');
+        hero.classList.remove('hero3');
+        hero.classList.remove('hero2');
+    });
     // Hide all content sections
     document.querySelectorAll('.content-section').forEach(section => {
         section.classList.remove('active');
@@ -16,21 +21,64 @@ function switchTab(tabId) {
     event.target.classList.add('active');
 }
 
-function checkPrice() {
-    const origin = document.getElementById('originCity').value;
-    const destination = document.getElementById('destinationCity').value;
-    const date = document.getElementById('departureDate').value;
+function rates2(event, tabId) {
+    event.preventDefault();  // Prevent form submission
+    const from = document.getElementById('origin').value;
+    const to = document.getElementById('destination').value;
+    const dates = document.getElementById('date').value;
+    const ship = document.getElementById('vehicle').value;
 
-    if (origin && destination && date) {
-        // In a real application, this would come from an API
-        const price = Math.floor(Math.random() * (2000000 - 500000) + 500000);
+
+    if (from && to && dates && ship) {
         
-        document.getElementById('route').textContent = `${origin} - ${destination}`;
-        document.getElementById('date').textContent = date;
-        document.getElementById('price').textContent = `Rp ${price.toLocaleString()}`;
-        
-        document.getElementById('priceDetails').classList.add('show');
+        document.getElementById('from').textContent = from;
+        document.getElementById('dates').textContent = dates;
+        document.getElementById('to').textContent = to;
+        document.getElementById('ship').textContent = ship;
+        document.querySelectorAll('.content-section').forEach(section => {
+        section.classList.remove('active');
+    });
+        document.getElementById(tabId).classList.add('active');
+        document.querySelectorAll('.hero').forEach(hero => {
+            hero.classList.remove('hero4');
+            hero.classList.remove('hero3');
+        hero.classList.add('hero2');
+    });
     } else {
-        alert('Mohon lengkapi semua field');
+        document.querySelectorAll('.content-section').forEach(section => {
+        section.classList.remove('active');
+    });
+        document.getElementById(tabId).classList.add('active');
+        document.querySelectorAll('.hero').forEach(hero => {
+            hero.classList.remove('hero4');
+            hero.classList.remove('hero3');
+        hero.classList.add('hero2');
+    });
     }
+}
+function rates3(event, tabId) {
+    event.preventDefault();  // Prevent form submission
+        document.querySelectorAll('.content-section').forEach(section => {
+        section.classList.remove('active');
+    });
+        document.getElementById(tabId).classList.add('active');
+        document.querySelectorAll('.hero').forEach(hero => {
+        hero.classList.remove('hero4');
+        hero.classList.remove('hero2');
+        hero.classList.add('hero3');
+
+    });
+}
+function rates4(event, tabId) {
+    event.preventDefault();  // Prevent form submission
+        document.querySelectorAll('.content-section').forEach(section => {
+        section.classList.remove('active');
+    });
+        document.getElementById(tabId).classList.add('active');
+        document.querySelectorAll('.hero').forEach(hero => {
+        hero.classList.remove('hero3');
+        hero.classList.remove('hero2');
+        hero.classList.add('hero4');
+
+    });
 }

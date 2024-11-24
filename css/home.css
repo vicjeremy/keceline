@@ -80,10 +80,19 @@ html
 
 /* home */
 .hero {
-    height: 98vh;
+    height: 108vh;
     background: url('../assets/images/home/Port1.png') center/cover;
-    color: white;
     padding: 5vh 0;
+    
+}
+.hero2{
+    height: 150vh;
+}
+.hero3{
+    height: 240vh;
+}
+.hero4{
+    height: 290vh;
 }
 
 .hero-content {
@@ -99,6 +108,7 @@ html
     margin-left: 0%;
     background: rgba(0,0,0,0.4);
     border-radius: 0 10px 10px 0;
+    color: white;
 }
 .hero h1 {
     color: white;
@@ -122,7 +132,6 @@ html
     align-items: center;
     justify-content: center;
     max-width: 1200px;
-/*    overflow: hidden;*/
 }
 .search-container h1 {
     color:#000;
@@ -132,7 +141,6 @@ html
     margin: 0%;
 }
 .tabs {
-/*    position: static;*/
     display: flex;
     gap: 2rem;
     color: var(--grey-color);
@@ -236,6 +244,661 @@ html
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
+/*Rates2*/
+ .route-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-width: 1200px;
+    margin: 30px 0px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .info-item {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .info-item.arrow {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .info-item strong {
+    font-weight: bold;
+  }
+  
+  .edit-link a {
+    color: green;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .edit-link a:hover {
+    text-decoration: underline;
+  }
+  
+  .form-content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Pastikan semua elemen berada dalam kolom */
+    gap: 15px; /* Jarak antar baris */
+}
+
+.form-content h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+.form-row {
+    display: flex;
+    flex-direction: row; /* Elemen dalam baris horizontal */
+    gap: 10px; /* Jarak antar elemen */
+    align-items: center; /* Selaraskan elemen secara vertikal */
+    justify-content: flex-start; /* Selaraskan elemen ke kiri */
+}
+
+.form-group {
+    position: static;
+    margin: 0; /* Hilangkan margin ekstra */
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+    width: 100%;
+}
+
+select {
+    width: 100%; /* Pastikan elemen input menggunakan seluruh ruang grup */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input {
+    width: 100%; /* Pastikan elemen input menggunakan seluruh ruang grup */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 0%;
+}
+
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+.unit {
+    position: absolute;
+    right: 10px;
+    top: 70%; /* Posisi unit disesuaikan dengan tinggi input */
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #555;
+}
+
+.size-group {
+    display: flex;
+    flex: 2;
+    flex-direction: column; /* Agar label berada di atas */
+}
+
+.size-inputs {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; /* Elemen di kiri */
+    align-items: center;
+    width: 40%;
+}
+
+.size-inputs input {
+    width: 40%; /* Input fleksibel */
+    flex: 1; /* Semua input memiliki lebar yang sama */
+}
+
+.or {
+    font-size: 14px;
+    color: #777;
+    text-align: center; /* Selaraskan teks "or" */
+    padding: 0 0px;
+}
+
+.add-item {
+    color: #4CAF50;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.add-item i {
+    margin-right: 5px;
+}
+
+.search-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.search-button button {
+    background-color: #154203;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/*Rates3*/
+  .container-1 {
+    max-width: 1200px;
+    margin: 0px 0px;
+    padding: 0px;
+}
+.edit-link-1 a {
+    color: green;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 700px;
+  }
+  
+  .edit-link-1 a:hover {
+    text-decoration: underline;
+  }
+.header-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header-1 select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.header-1 a {
+    color: #006400;
+    text-decoration: none;
+    font-weight: bold;
+}
+.summary {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+.summary h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.summary .details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.summary .details div {
+    text-align: center;
+}
+.summary .details div p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+.summary .details div p.value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.rates {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    border-radius: 15px;
+}
+.rates p {
+    margin: 0 0 10px;
+    text-align: left;
+    font-size: 14px;
+}
+.rates button {
+    background-color: #006400;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 0vw;
+    border-radius: 5px;
+}
+
+/*Rates3*/
+.modal1 {
+    display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal1-content{
+    background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 900px;
+}
+.close-btn {
+    /*position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;*/
+    color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal1-content h1 {
+    color: #154203;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.modal1-content p {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.modal1-content label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #333;
+}
+input[type="text"], input[type="email"], select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+.row {
+    display: flex;
+    gap: 5px;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+.row input#first-name {
+    /* Tambahkan gaya di sini */
+    width: 21vw;
+  }
+  .row input#last-name {
+    /* Tambahkan gaya di sini */
+    width: 21vw;
+  }
+  
+.row input[type="text"], .row input[type="email"], .row select {
+    width: calc(100% - 10px);
+}
+.row input[type="text"]:nth-child(3) {
+    width: calc(33% - 10px);
+}
+.row input[type="text"]:nth-child(4) {
+    width: calc(33% - 10px);
+}
+.row input[type="text"]:nth-child(5) {
+    width: calc(33% - 10px);
+}
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.buttons1 {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #154203;
+    cursor: pointer;
+    text-align: center;
+    min-width: 100px;
+    width: 300px;
+}
+.cancel-button {
+    background-color: white;
+    color: #154203;
+}
+.submit-button {
+    background-color: #154203;
+    color: white;
+}
+.security-measures {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+@media (max-width: 600px) {
+    .row input[type="text"], .row input[type="email"], .row select {
+        width: 100%;
+    }
+}
+
+.services3 {
+    margin-bottom: 20px;
+}
+.services3 h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.service3-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .service3-item img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .service3-item .info {
+    display: flex;               /* Use flexbox for horizontal layout */
+    flex-wrap: wrap;             /* Allow items to wrap if there's not enough space */
+    margin-left: 15px;
+  }
+  
+  .service3-item .info div {
+    display: flex;               /* Stack the label and value vertically */
+    flex-direction: column;      /* Stack each label and value in a column */
+    margin-right: 30px;          /* Space between each column */
+  }
+  
+  .service3-item .info p {
+    margin: 5px 0;               /* Add margin between paragraphs */
+    font-size: 14px;
+  }
+  
+  .service3-item .details {
+    text-align: right;
+  }
+  
+  .service3-item .price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .service3-item .quote-link {
+    font-size: 14px;
+    color: #292929;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .service3-item .quote-link:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-1 {
+    text-align: left;
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px;
+}
+.footer-1 a {
+    color: #006400;
+    text-decoration: none;
+}
+
+.footer-1 p{
+    text-align: right;
+}
+
+.buttons3 {
+    display: flex;
+    justify-content: space-between;
+}
+.back-button a {
+    text-decoration: none;
+}
+.buttons3 button {
+    background-color: #154203;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttons3 button.back {
+    background-color: transparent;
+    color: black;
+}
+/*Rates4*/
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid #ccc; */
+    padding: 10px 0;
+  }
+  
+  .service-item img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .service-item .info {
+    display: flex;               /* Use flexbox for horizontal layout */
+    flex-wrap: wrap;             /* Allow items to wrap if there's not enough space */
+    margin-left: 15px;
+  }
+  
+  .service-item .info div {
+    display: flex;               /* Stack the label and value vertically */
+    flex-direction: column;      /* Stack each label and value in a column */
+    margin-right: 80px;          /* Space between each column */
+  }
+  
+  .service-item .info p {
+    margin: 5px 0;               /* Add margin between paragraphs */
+    font-size: 14px;
+  }
+  
+  .service-item .details {
+    text-align: right;
+  }
+  
+  .service-item .price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .service-item .quote-link {
+    font-size: 14px;
+    color: #292929;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .service-item .quote-link:hover {
+    text-decoration: underline;
+  }
+
+  .container-2 {
+    max-width: 1200px;
+    margin: 0px 0px;
+    padding: 0px;
+}
+
+.contact {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.contact h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container-contact {
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.form-section {
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    padding: 20px;
+    width: 600px;
+    margin-left: 1vw;
+}
+.form-section h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.form-group-1{
+    display: flex;
+    gap:10px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.form-group input {
+    width: calc(100% - 10px);
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group-inline {
+    display: flex;
+    gap: 10px;
+}
+.form-group-inline input {
+    width: calc(33.33% - 10px);
+}
+.form-group-inline input.long {
+    width: calc(100% - 10px);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+}
+.next-button a, .back-button a {
+    text-decoration: none;
+}
+.buttons button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttons button.back {
+    background-color: transparent;
+    color: black;
+}
+
+.footer-1 {
+    text-align: left;
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px;
+}
+.footer-1 a {
+    color: #006400;
+    text-decoration: none;
+}
+
+/*Rates5*/
+.rates5 {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    margin-top: 5vh;
+    margin-left: 0;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.message {
+    font-size: 16px;
+    color: #000;
+}
+.message h1 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+.message p {
+    margin: 5px 0 0 0;
+    margin-top: 3vh;
+}
+.quote-link {
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-top: 8vh;
+}
+.quote-link i {
+    margin-left: 5px;
+}
+
 /* services */
 .services-container {
     max-width: 1200px;
@@ -316,7 +979,6 @@ h1 {
 .cta-card {
     background-color: #fff;
     padding: 10px;
-    padding-right: 10px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -335,7 +997,7 @@ h1 {
 }
 .cta-ca {
     display: flex;
-    gap: 300px;
+    gap: 15rem;
 }
 
 .button {
