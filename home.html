@@ -27,7 +27,7 @@
     </nav>
 
     <!-- home -->
-    <div class="hero ">
+    <div class="hero">
         <div class="hero-content">
             <div class="hero-text">
                 <h1>All-Around<br>Logistic Excellence</h1>
@@ -43,7 +43,7 @@
                     <i class="fas fa-calculator"></i>
                     Rates
                 </div>
-                <div class="tab" onclick="switchTab('tracking');">
+                <div class="tab " onclick="switchTab('tracking');">
                     <i class="fas fa-map-marker-alt"></i>
                     Tracking
                 </div>
@@ -638,11 +638,84 @@
             </div>
 
             <!-- Tracking -->
-            <div id="tracking" class="content-section track">
+            <div id="tracking" class="content-section track ">
                 <h1><strong>Tracks Your Shipment</strong></h1>
                 <p>Separate more numbers with commas</p>
-                <input type="text" name="" placeholder="Insert Tracking Number">
-                <button class="track-btn" onclick="checkPrice()">Search Now <i class="fas fa-search"></i></button>
+                <input type="text" id="res" placeholder="Insert Tracking Number">
+                <button class="track-btn" onclick="checkTrack()">Search Now <i class="fas fa-search"></i></button>
+
+                <div id="tracks" class="track-detail">
+                    <h1 class="titles">Latest Status Information</h1>
+        
+                    <div class="tracking-card">
+                        <div class="header-wrapper">
+                            <img src="assets\images\careers\box-careers.png">
+                            
+                            <div class="tracking-header">
+                                <div class="tracking-info">
+                                    <div class="label">Tracking No.</div>
+                                    <div class="value"><span id="resi"></span></div>
+                                </div>
+                                <div class="tracking-info">
+                                    <div class="label">Origin</div>
+                                    <div class="value">Shanghai, China</div>
+                                </div>
+                                <div class="tracking-info">
+                                    <div class="label">Destination</div>
+                                    <div class="value">Semarang, Indonesia</div>
+                                </div>
+                                <div class="tracking-info">
+                                    <div class="label">Delivery Status</div>
+                                    <div class="value"></div>
+                                </div>
+                                <div class="tracking-info">
+                                    <div class="label">Service Type</div>
+                                    <div class="value">By Sea</div>
+                                </div>
+                                <div class="tracking-info">
+                                    <div class="label">Posted Date</div>
+                                    <div class="value">1 Feb, 08:25 WIB</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="toggle-timeline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6"/>
+                            </svg>
+                            <span>View Timeline</span>
+                        </button>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot current"></div>
+                                <div class="timeline-date">
+                                    <span class="date">Today</span>
+                                    <span class="time">09:50 WIB</span>
+                                </div>
+                                <div class="status">Item is currently with Customs awaiting Clearance</div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">
+                                    <span class="date">2 Feb</span>
+                                    <span class="time">19:37 WIB</span>
+                                </div>
+                                <div class="status">Shipment Received at Processing Facilities</div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">
+                                    <span class="date">1 Feb</span>
+                                    <span class="time">08:25 WIB</span>
+                                </div>
+                                <div class="status">Shipment Picked Up</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Schedule -->
@@ -909,7 +982,7 @@
         <i class="fas fa-comments"></i>
     </div></a>
 
-    <script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
 <script>
     // Get the modal
     var modal = document.getElementById("modal1");
@@ -963,6 +1036,34 @@
             modal2.style.display = "none";
         }
     }
+</script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.querySelector('.toggle-timeline');
+            const timelineItems = document.querySelectorAll('.timeline-item:not(:first-child)');
+            let isExpanded = false;
+
+            // Initially hide all timeline items except the first one
+            timelineItems.forEach(item => {
+                item.classList.add('hidden');
+            });
+
+            toggleButton.addEventListener('click', function() {
+                isExpanded = !isExpanded;
+                
+                // Toggle the expanded class for button styling
+                this.classList.toggle('expanded');
+                
+                // Update button text
+                const buttonText = this.querySelector('span');
+                buttonText.textContent = isExpanded ? 'Hide Timeline' : 'View Timeline';
+                
+                // Toggle visibility of timeline items
+                timelineItems.forEach(item => {
+                    item.classList.toggle('hidden');
+                });
+            });
+        });
 </script>
 </body>
 </html>

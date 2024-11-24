@@ -82,3 +82,14 @@ function rates4(event, tabId) {
 
     });
 }
+function checkTrack() {
+    const resi = document.getElementById('res').value;
+    document.getElementById('resi').textContent = resi;
+    document.getElementById('tracks').classList.add('show');
+    document.querySelectorAll('.hero').forEach(hero => {
+        hero.classList.remove('hero4');
+        hero.classList.remove('hero2');
+        hero.classList.add('hero3');
+
+    });
+}
