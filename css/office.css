@@ -85,11 +85,13 @@ header nav ul li a {
 .bl-square h1 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .bl-square p {
     font-size: 18px;
     line-height: 1.6;
+    color: #fff;
 }
 
 .text-office {

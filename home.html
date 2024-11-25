@@ -47,11 +47,11 @@
                     <i class="fas fa-map-marker-alt"></i>
                     Tracking
                 </div>
-                <div class="tab" onclick="switchTab('schedule');">
+                <div class="tab " onclick="switchTab('schedule');">
                     <i class="far fa-calendar-alt"></i>
                     Schedule
                 </div>
-                <div class="tab" onclick="switchTab('quote');">
+                <div class="tab " onclick="switchTab('quote');">
                     <i class="fas fa-quote-right"></i>
                     Get a Quote
                 </div>
@@ -298,7 +298,6 @@
                     </div>
                     <div id="modal2" class="modal1">
                         <div class="modal1-content">
-                            <span class="close-btn">&times;</span>
                             <h1>Partner Benefits</h1>
                             <p>Thank you for Signing Up!</p>
                             <p>Please log in to see your discounted rate.</p>
@@ -741,15 +740,601 @@
                             <option value="truck">normal</option>
                             <option value="kapal">by sea</option>
                         </select>
-                        <button class="rates-btn" onclick="checkPrice()"><i class="fas fa-search"></i></button>
+                        <button class="rates-btn" onclick="rates2(event, 'schedule2');"><i class="fas fa-search"></i></button>
                     </form>
             </div>
+
+            <!-- Schedule2 -->
+            <div id="schedule2" class="content-section ">
+                <div class="route-info">
+                    <div class="info-item">
+                        <span>From: <strong>Shanghai, China 510000</strong></span>
+                    </div>
+                    <div class="info-item arrow">→</div>
+                    <div class="info-item">
+                        <span>To: <strong>Semarang, Indonesia 50114</strong></span>
+                    </div>
+                    <div class="info-item">
+                        <span>Shipment Date: <strong>Friday, 23 Feb 2024</strong></span>
+                    </div>
+                    <div class="info-item">
+                        <span>Service Type: <strong>By Sea</strong></span>
+                    </div>
+                    <div class="info-item edit-link">
+                        <a href="#">Edit Service Details</a>
+                    </div>
+                </div>
+                <div class="infos">
+                 <h1 class="info-text1">Search Results</h1>  
+                    <p>
+                      If the "Book" column is blank, we are unable to accept new bookings for the respective vessel due to operating constraints or missed cutoff date.
+                    </p>
+                </div>    
+                    
+                    <div class="table-wrapper">
+                      <table class="results-table">
+                        <thead class="results-header">
+                          <tr>
+                            <th>Origin City</th>
+                            <th>POL</th>
+                            <th>Transfer Port</th>
+                            <th>POD</th>
+                            <th>Destination City</th>
+                            <th>Est. Trans. Time <span class="time-icon">?</span></th>
+                            <th>Cargo Nature</th>
+                            <th>Book</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Shanghai</td>
+                            <td>Shanghai</td>
+                            <td>Singapore</td>
+                            <td>Semarang</td>
+                            <td>Semarang</td>
+                            <td>11 days</td>
+                            <td>Dry</td>
+                            <td><button class="book-button">Book</button></td>
+                          </tr>
+                          <tr>
+                            <td>Shanghai</td>
+                            <td>Shanghai</td>
+                            <td>Singapore</td>
+                            <td>Semarang</td>
+                            <td>Semarang</td>
+                            <td>15 days</td>
+                            <td>Dry</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>Shanghai</td>
+                            <td>Shanghai</td>
+                            <td>Singapore</td>
+                            <td>Semarang</td>
+                            <td>Semarang</td>
+                            <td>16 days</td>
+                            <td>Dry</td>
+                            <td><button class="book-button">Book</button></td>
+                          </tr>
+                          <tr>
+                            <td>Shanghai</td>
+                            <td>Shanghai</td>
+                            <td>Singapore</td>
+                            <td>Semarang</td>
+                            <td>Semarang</td>
+                            <td>14 days</td>
+                            <td>Reefer</td>
+                            <td><button class="book-button">Book</button></td>
+                          </tr>
+                          <tr>
+                            <td>Shanghai</td>
+                            <td>Shanghai</td>
+                            <td>Singapore</td>
+                            <td>Semarang</td>
+                            <td>Semarang</td>
+                            <td>16 days</td>
+                            <td>Reefer</td>
+                            <td><button class="book-button">Book</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+            </div>    
 
             <!-- Quote -->
             <div id="quote" class="content-section">
                 <div class="cta-ca quote">
                     <p>Start your logistic journey with us and <br> experience the smooth and trusted flow from end <br> to end on one integrated system.</p>
-                    <button>Get A Quote →</button>
+                    <button onclick="rates2(event, 'quote2');" >Get A Quote →</button>
+                </div>
+            </div>
+
+            <!-- Quote2 -->
+            <div id="quote2" class="content-section ">
+                <div class="gr-box">  
+                    <div class="containerr">
+                        <div class="headerr">Get your quotes</div>
+                        <div class="tabss">
+                            <div class="tabr active">Origin and Destination</div>
+                            <div class="tabr">Shipment Details</div>
+                            <div class="tabr">Select Services</div>
+                            <div class="tabr">Add-Ons</div>
+                            <div class="tabr">Your Contact Details</div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <label for="from">From</label>
+                                <select id="from">
+                                    <option>Select City, Country</option>
+                                </select>
+                            </div>
+                            <div class="swap-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <div>
+                                <label for="to">To</label>
+                                <select id="to">
+                                    <option>Select City, Country</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="dates">Dates</label>
+                                <input type="date" id="dates" placeholder="Select Dates">
+                            </div>
+                            <div>
+                                <label for="service">Service</label>
+                                <select id="service">
+                                    <option>Select Service</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="next-button">
+                            <button onclick="rates2(event, 'quote3');" >Next <i class="fas fa-arrow-right"></i></button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quote3 -->
+            <div id="quote3" class="content-section ">
+                <div class="containerr">
+                    <div class="headerr">Get your quotes</div>
+                    <div class="tabss">
+                        <div class="tabr active">Origin and Destination</div>
+                        <div class="tabr active">Shipment Details</div>
+                        <div class="tabr">Select Services</div>
+                        <div class="tabr">Add-Ons</div>
+                        <div class="tabr">Your Contact Details</div>
+                    </div>
+                    <div class="form-content">
+                        <div class="form-row">
+                          <div class="form-group">
+                            <label for="package">Package</label>
+                            <select id="package">
+                              <option>Select Commodity Type</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="weight">Weight</label>
+                            <input type="text" id="weight" placeholder="Weight">
+                            <span class="unit">Kg</span>
+                          </div>
+                          <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <input type="text" id="quantity" placeholder="Packages">
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group">
+                            <label for="volume">Volume</label>
+                            <input type="text" id="volume" placeholder="m³">
+                          </div>
+                          <span class="or">or</span>
+                          <div class="form-group size-group">
+                            <label for="size">Size</label>
+                            <div class="size-inputs">
+                              <input type="text" placeholder="Length"> cm
+                              <input type="text" placeholder="Width"> cm
+                              <input type="text" placeholder="Height"> cm
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="add-item">
+                        <i class="fas fa-plus-circle"></i> Add Another Item
+                    </div>
+                    <div class="buttons">
+                            <button onclick="rates2(event, 'quote2');" class="back"><i class="fas fa-arrow-left"></i> Back</button>
+                        
+                            <button onclick="rates3(event, 'quote4');">Next <i class="fas fa-arrow-right"></i></button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote4 -->
+            <div id="quote4" class="content-section ">
+                <div class="containerr">
+                    <div class="headerr">Get your quotes</div>
+                    <div class="tabss">
+                        <div class="tabr active">Origin and Destination</div>
+                        <div class="tabr active">Shipment Details</div>
+                        <div class="tabr active">Select Services</div>
+                        <div class="tabr">Add-Ons</div>
+                        <div class="tabr">Your Contact Details</div>
+                    </div>
+        
+                    <div class="container-1">
+                        <div class="headerrr-1">
+                            <select>
+                                <option>Shipment Date</option>
+                                <option>01 Feb 2024</option>
+                            </select>
+                            <a href="#">Save Shipment</a>
+                        </div>
+                        <div class="summary">
+                            <h2>Summary</h2>
+                            <div class="details">
+                                <div>
+                                    <p>Pieces</p>
+                                    <p class="value">2</p>
+                                </div>
+                                <div>
+                                    <p>Actual Weight</p>
+                                    <p class="value">40 kg</p>
+                                </div>
+                                <div>
+                                    <p>Total Volume</p>
+                                    <p class="value">1.05 m³</p>
+                                </div>
+                                <div>
+                                    <p>Est. Chargeable Weight</p>
+                                    <p class="value">40 kg</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rates">
+                            <p><b>Like the rates?</b></p>
+                            <p>Sign up as a business partner today and enjoy better rates when you ship with us in weekly terms and conditions apply</p>
+                            <button>Sign Up Now</button>
+                        </div>
+                        <div class="services">
+                            <h3>Select Services</h3>
+                            <div class="service-item">
+                                <img alt="Service icon" height="50" src="assets\images\about\ship_quote.png" width="50" />
+                                <div class="info">
+                                    <div>
+                                        <p><b>Service</b></p>
+                                        <p>Express</p>
+                                    </div>
+                                    <div>
+                                        <p><b>Latest Drop Off Time</b></p>
+                                        <p>Thu, 22 Feb 2024 23:59:59</p>
+                                    </div>
+                                    <div>
+                                        <p><b>Estimated Delivery</b></p>
+                                        <p>Mon, 1 April 2024</p>
+                                    </div>
+                                </div>
+                                <div class="price">Starts from 1.888.000 IDR</div>
+                            </div>
+        
+                            <div class="service-item">
+                                <img alt="Service icon" height="50" src="assets\images\about\ship_quote.png" width="50" />
+                                <div class="info">
+                                    <div>
+                                        <p><b>Service</b></p>
+                                        <p>Express</p>
+                                    </div>
+                                    <div>
+                                        <p><b>Latest Drop Off Time</b></p>
+                                        <p>Thu, 22 Feb 2024 23:59:59</p>
+                                    </div>
+                                    <div>
+                                        <p><b>Estimated Delivery</b></p>
+                                        <p>Mon, 1 April 2024</p>
+                                    </div>
+                                </div>
+                                <div class="price">Starts from 1.888.000 IDR</div>
+                            </div>
+        
+                            <div class="service-item">
+                                <img alt="Service icon" height="50" src="assets\images\about\ship_quote.png" width="50" />
+                                <div class="info">
+                                    <div>
+                                        <p><b>Service</b></p>
+                                        <p>Express</p>
+                                    </div>
+                                    <div>
+                                        <p><b>Latest Drop Off Time</b></p>
+                                        <p>Thu, 22 Feb 2024 23:59:59</p>
+                                    </div>
+                                    <div>
+                                        <p><b>Estimated Delivery</b></p>
+                                        <p>Mon, 1 April 2024</p>
+                                    </div>
+                                </div>
+                                <div class="price">Starts from 1.888.000 IDR</div>
+                            </div>
+        
+                            <div class="service-item">
+                                <img alt="Service icon" height="50" src="assets\images\about\ship_quote.png" width="50" />
+                                <div class="info">
+                                    <div>
+                                        <p><b>Service</b></p>
+                                        <p>Express</p>
+                                    </div>
+                                    <div>
+                                        <p><b>Latest Drop Off Time</b></p>
+                                        <p>Thu, 22 Feb 2024 23:59:59</p>
+                                    </div>
+                                    <div>
+                                        <p><b>Estimated Delivery</b></p>
+                                        <p>Mon, 1 April 2024</p>
+                                    </div>
+                                </div>
+                                <div class="price">Starts from 1.888.000 IDR</div>
+                            </div>
+                        </div>
+                        <div class="footer-1">
+                            <li>Please note that this quote is an estimate only. Price and time quoted are indicative only and might differ from the actual booking depending on the information that you provide.</li>
+                            <li>Rates shown here may be different than the actual charges for your shipment as it might not include duties, taxes, custom charges, storage fees or any other surcharges and fees.</li>
+                            <li>Log in to your account to see your account-specific rates and services.</li><br>
+                            <p>
+                                <a href="#">Email Quote</a> |
+                                <a href="#">Copy Link</a> |
+                                <a href="#">Print / Download Quote</a>
+                            </p>
+                        </div>
+        
+                        <div class="buttons">
+                                <button onclick="rates2(event, 'quote3');" class="back"><i class="fas fa-arrow-left"></i> Back</button>
+                            
+                                <button onclick="rates3(event, 'quote5');">Next <i class="fas fa-arrow-right"></i></button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote5 -->
+            <div id="quote5" class="content-section ">
+                <div class="containerr">
+                    <div class="headerr">Get your quotes</div>
+                    <div class="tabss">
+                        <div class="tabr active">Origin and Destination</div>
+                        <div class="tabr active">Shipment Details</div>
+                        <div class="tabr active">Select Services</div>
+                        <div class="tabr active">Add-Ons</div>
+                        <div class="tabr">Your Contact Details</div>
+                    </div>
+        
+                    <div class="container-1">
+                        <h1>Select Add-Ons (Optional)</h1>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th class="price">Starts from</th>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Insurance</td>
+                                <td class="price">8.293.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Climate Impact - GoGreen</td>
+                                <td class="price">200.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Inspection Services</td>
+                                <td class="price">500.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Certifications</td>
+                                <td class="price">200.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Customs Clearance</td>
+                                <td class="price">5.533.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Trade, Logistics and Inventory</td>
+                                <td class="price">10.000.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Finance</td>
+                                <td class="price">433.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Delivery Confirmation</td>
+                                <td class="price">50.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Signature Required</td>
+                                <td class="price">80.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Additional Handling (Unusually shaped or irregular packaging)</td>
+                                <td class="price">700.000 IDR</td>
+                            </tr>
+                        </table>
+                    </div>
+        
+                    <div class="buttons">
+                            <button onclick="rates3(event, 'quote4');" class="back"><i class="fas fa-arrow-left"></i> Back</button>
+                        
+                            <button onclick="rates3(event, 'quote6');">Next <i class="fas fa-arrow-right"></i></button>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quote6 -->
+            <div id="quote6" class="content-section ">
+                <div class="containerr">
+                    <div class="headerr">Get your quotes</div>
+                    <div class="tabss">
+                        <div class="tabr active">Origin and Destination</div>
+                        <div class="tabr active">Shipment Details</div>
+                        <div class="tabr active">Select Services</div>
+                        <div class="tabr active">Add-Ons</div>
+                        <div class="tabr active">Your Contact Details</div>
+                    </div>
+        
+                    <div class="containerrr-1">
+                        <div class="form-sectionr">
+                            <h2>Shipper</h2>
+                            <div class="form-groupr-1">
+                                <div class="form-groupr">
+                                    <label for="shipper-first-name">First Name<span style="color: red;">*</span></label>
+                                    <input type="text" id="shipper-first-name">
+                                </div>
+                                <div class="form-groupr">
+                                    <label for="shipper-last-name">Last Name<span style="color: red;">*</span></label>
+                                    <input type="text" id="shipper-last-name">
+                                </div>
+                            </div>
+                            <div class="form-group-inline">
+                                <div class="form-groupr">
+                                    <label for="shipper-country-code">Country Code</label>
+                                    <input type="text" id="shipper-country-code" class="long">
+                                </div>
+                                <div class="form-groupr">
+                                    <label for="shipper-phone">Phone</label>
+                                    <input type="text" id="shipper-phone" class="long">
+                                </div>
+                                <div class="form-groupr">
+                                    <label for="shipper-extension">Extension</label>
+                                    <input type="text" id="shipper-extension" class="long">
+                                </div>
+                            </div>
+                            <div class="form-groupr">
+                                <label for="shipper-email">Email<span style="color: red;">*</span></label>
+                                <input type="email" id="shipper-email">
+                            </div>
+                            <div class="form-groupr">
+                                <label for="shipper-company-name">Company Name</label>
+                                <input type="text" id="shipper-company-name">
+                            </div>
+                            <div class="form-groupr">
+                                <label for="shipper-address-line-1">Address Line 1</label>
+                                <input type="text" id="shipper-address-line-1">
+                            </div>
+                            <div class="form-groupr">
+                                <label for="shipper-address-line-2">Address Line 2</label>
+                                <input type="text" id="shipper-address-line-2">
+                            </div>
+                            <div class="form-groupr">
+                                <label for="shipper-country">Country/Territory</label>
+                                <input type="text" id="shipper-country">
+                            </div>
+                            <div class="form-group-inline">
+                                <div class="form-groupr">
+                                    <label for="shipper-city">City</label>
+                                    <input type="text" id="shipper-city" class="long">
+                                </div>
+                                <div class="form-groupr">
+                                    <label for="shipper-state">State</label>
+                                    <input type="text" id="shipper-state" class="long">
+                                </div>
+                                <div class="form-groupr">
+                                    <label for="shipper-postal-code">Postal Code</label>
+                                    <input type="text" id="shipper-postal-code" class="long">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-sectionr">
+                            <h2>Consignee</h2>
+                            <div class="form-groupr-1">
+                                <div class="form-groupr">
+                                    <label for="shipper-first-name">First Name<span style="color: red;">*</span></label>
+                                    <input type="text" id="shipper-first-name">
+                                </div>
+                                <div class="form-groupr">
+                                    <label for="shipper-last-name">Last Name<span style="color: red;">*</span></label>
+                                    <input type="text" id="shipper-last-name">
+                                </div>
+                            </div>
+                            <div class="form-group-inline">
+                                <div class="form-groupr">
+                                    <label for="consignee-country-code">Country Code</label>
+                                    <input type="text" id="consignee-country-code" class="long">
+                                </div>
+                                <div class="form-groupr">
+                                    <label for="consignee-phone">Phone</label>
+                                    <input type="text" id="consignee-phone" class="long">
+                                </div>
+                                <div class="form-groupr">
+                                    <label for="consignee-extension">Extension</label>
+                                    <input type="text" id="consignee-extension" class="long">
+                                </div>
+                            </div>
+                            <div class="form-groupr">
+                                <label for="consignee-email">Email<span style="color: red;">*</span></label>
+                                <input type="email" id="consignee-email">
+                            </div>
+                            <div class="form-groupr">
+                                <label for="consignee-company-name">Company Name</label>
+                                <input type="text" id="consignee-company-name">
+                            </div>
+                            <div class="form-groupr">
+                                <label for="consignee-address-line-1">Address Line 1</label>
+                                <input type="text" id="consignee-address-line-1">
+                            </div>
+                            <div class="form-groupr">
+                                <label for="consignee-address-line-2">Address Line 2</label>
+                                <input type="text" id="consignee-address-line-2">
+                            </div>
+                            <div class="form-groupr">
+                                <label for="consignee-country">Country/Territory</label>
+                                <input type="text" id="consignee-country">
+                            </div>
+                            <div class="form-group-inline">
+                                <div class="form-groupr">
+                                    <label for="consignee-city">City</label>
+                                    <input type="text" id="consignee-city" class="long">
+                                </div>
+                                <div class="form-groupr">
+                                    <label for="consignee-state">State</label>
+                                    <input type="text" id="consignee-state" class="long">
+                                </div>
+                                <div class="form-groupr">
+                                    <label for="consignee-postal-code">Postal Code</label>
+                                    <input type="text" id="consignee-postal-code" class="long">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                            <button onclick="rates3(event, 'quote5');" class="back"><i class="fas fa-arrow-left"></i> Back</button>
+                        
+                            <button onclick="switchTab('quote7');">Submit <i class="fas fa-arrow-right"></i></button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote7 -->
+            <div id="quote7" class="content-section ">
+                <div class="containerr">
+                    <div class="box">
+                        <div class="message">
+                            <p>Thank you for your business!<br>
+                                The quote you requested has been sent to Shipper’s email.</p>
+                        </div>
+                        <button onclick="switchTab('quote7');" class="quote-link">Get another Quote <i class="fas fa-arrow-right"></i></button>
+                    </div>
                 </div>
             </div>
 
@@ -977,10 +1562,10 @@
 </div>
 
 
-    <!-- chat -->
-    <a href="#"></a><div class="chat-button">
-        <i class="fas fa-comments"></i>
-    </div></a>
+<!-- chat -->
+<a href="#"></a><div class="chat-button">
+    <i class="fas fa-comments"></i>
+</div></a>
 
 <script type="text/javascript" src="js/home.js"></script>
 <script>
@@ -1065,5 +1650,6 @@
             });
         });
 </script>
+
 </body>
 </html>
