@@ -61,14 +61,14 @@ header nav ul li a {
 }
 
 .gr-box {
-    background-color: #d3d3d3;
-    background-size: cover;
-    background-position: center;
-    /*position: absolute;
-    top:90%;*/
-    top:auto;
-    height: 100vh;
-    width: 100%;
+    background: white;
+    padding: 2rem;
+    margin: 0% 6%;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+
 }
 
 .background {
@@ -76,38 +76,27 @@ header nav ul li a {
     justify-content: flex-start; 
     align-items: center; 
     height: 100px; 
-    padding: 0 20px;
+    padding: 15px 20px;
     /*position: absolute;
     bottom: 65%; 
     left: 10%; */
     /* margin-top: 15vh; */
     padding-top: 10vh;
-    font-size: 32px; 
+    font-size: 24px; 
     color: black; 
 }
 
-.horizontal-line {
-    /*position: absolute;
-    left: 0; */
-    width: 100%; 
-    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
-    margin-top: 1vh; 
+.container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    width: auto;
+    display: none;
 }
 
- .container {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 80%;
-    max-width: 800px;
-    margin-top: 5vh;
-    margin-left: 20vw;
-}
-.header {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.container.active {
+    display: block;
 }
 .tabs {
     display: flex;
@@ -139,24 +128,29 @@ header nav ul li a {
 .form-group {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 20px;
 }
 .form-group label {
-    flex: 1;
-    margin-right: 10px;
+    display: block;
+    margin-bottom: 5px;
 }
 .form-group select, .form-group input {
-    flex: 2;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 .form-group .swap-icon {
-    flex: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 10px;
-    cursor: pointer;
 }
+.form-group .swap-icon i {
+    font-size: 20px;
+    color: #ddd;
+}
+
 .next-button {
     display: flex;
     justify-content: flex-end;
@@ -166,8 +160,8 @@ header nav ul li a {
 }
 
 .next-button button {
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: transparent;
+    color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -293,4 +287,430 @@ header nav ul li a {
 .floating-button i {
     color: white;
     font-size: 24px;
+}
+
+/* shipment */
+#quote2 .forms-content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Pastikan semua elemen berada dalam kolom */
+    gap: 15px; /* Jarak antar baris */
+}
+
+#quote2 .forms-row {
+    display: flex;
+    flex-direction: row; /* Elemen dalam baris horizontal */
+    gap: 10px; /* Jarak antar elemen */
+    align-items: center; /* Selaraskan elemen secara vertikal */
+    justify-content: flex-start; /* Selaraskan elemen ke kiri */
+}
+
+#quote2 .forms-group {
+    position: relative;
+    margin: 0; /* Hilangkan margin ekstra */
+}
+
+#quote2 label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+    width: 100%;
+}
+
+#quote2 select {
+    width: 100%; /* Pastikan elemen input menggunakan seluruh ruang grup */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#quote2 input {
+    width: 100%; /* Pastikan elemen input menggunakan seluruh ruang grup */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 0%;
+}
+
+
+#quote2 input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+#quote2 .unit {
+    position: absolute;
+    right: 10px;
+    top: 70%; /* Posisi unit disesuaikan dengan tinggi input */
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #555;
+}
+
+#quote2 .size-group {
+    display: flex;
+    flex: 2;
+    flex-direction: column; /* Agar label berada di atas */
+}
+
+#quote2 .size-inputs {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; /* Elemen di kiri */
+    align-items: center;
+    width: 40%;
+}
+
+#quote2 .size-inputs input {
+    width: 40%; /* Input fleksibel */
+    flex: 1; /* Semua input memiliki lebar yang sama */
+}
+
+#quote2 .or {
+    font-size: 14px;
+    color: #777;
+    text-align: center; /* Selaraskan teks "or" */
+    padding: 0 0px;
+}
+
+#quote2 .add-item {
+    color: #4CAF50;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+#quote2 .add-item i {
+    margin-right: 5px;
+}
+#quote2 .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+#quote2 .next-button a, .back-button a {
+    text-decoration: none;
+}
+
+#quote2 .buttons button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#quote2 .buttons button.back {
+    background-color: transparent;
+    color: black;
+}
+
+/* qoute3 service */
+.container-1 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.header-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header-1 select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.header-1 a {
+    color: #006400;
+    text-decoration: none;
+    font-weight: bold;
+}
+.summary {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+.summary h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.summary .details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.summary .details div {
+    text-align: center;
+}
+.summary .details div p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+.summary .details div p.value {
+    font-size: 24px;
+    font-weight: bold;
+}
+.rates {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    border-radius: 15px;
+}
+.rates p {
+    margin: 0 0 10px;
+    text-align: left;
+    font-size: 14px;
+}
+.rates button {
+    background-color: #006400;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 0vw;
+    border-radius: 5px;
+}
+.services {
+    margin-bottom: 20px;
+}
+.services h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.service-item img {
+    width: 50px;
+    height: 50px;
+}
+.service-item .info {
+    display: flex;               /* Use flexbox for horizontal layout */
+    flex-wrap: wrap;             /* Allow items to wrap if there's not enough space */
+    margin-left: 15px;
+}
+
+.service-item .info div {
+    display: flex;               /* Stack the label and value vertically */
+    flex-direction: column;      /* Stack each label and value in a column */
+    margin-right: 30px;          /* Space between each column */
+}
+
+.service-item .info p {
+    margin: 5px 0;               /* Add margin between paragraphs */
+    font-size: 14px;
+}
+
+.service-item .price {
+    font-size: 18px;
+    font-weight: bold;
+}
+.footer-1 {
+    text-align: left;
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px;
+}
+.footer-1 a {
+    color: #006400;
+    text-decoration: none;
+}
+
+.footer-1 p{
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.next-button a, .back-button a {
+    text-decoration: none;
+}
+.buttons button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttons button.back {
+    background-color: transparent;
+    color: black;
+}
+
+/* quote4 add */
+#quote4 .container-1 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+#quote4 h1 {
+    font-size: 18px;
+    font-weight: normal;
+}
+#quote4 table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#quote4 th, #quote4 td {
+    padding: 10px;
+    text-align: left;
+}
+#quote4 th {
+    font-size: 14px;
+    font-weight: normal;
+}
+#quote4 td {
+    font-size: 16px;
+}
+#quote4 .price {
+    text-align: right;
+    font-weight: bold;
+}
+#quote4 .checkbox {
+    width: 20px;
+}
+
+#quote4 .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+#quote4 .next-button a, #quote4 .back-button a {
+    text-decoration: none;
+}
+#quote4 .buttons button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#quote4 .buttons button.back {
+    background-color: transparent;
+    color: black;
+}
+
+/* quote5 Contact */
+#quote5 .container-1 {
+    display: flex;
+    gap: 20px;
+}
+#quote5 .formss-section {
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    padding: 20px;
+    width: 600px;
+    /* margin-left: 5vw; */
+}
+#quote5 .formss-section h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#quote5 .formss-group-1{
+    display: flex;
+    gap:10px;
+}
+#quote5 .formss-group {
+    margin-bottom: 15px;
+}
+#quote5 .formss-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+#quote5 .formss-group input {
+    width: calc(100% - 10px);
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#quote5 .formss-group-inline {
+    display: flex;
+    gap: 10px;
+}
+#quote5 .formss-group-inline input {
+    width: calc(33.33% - 10px);
+}
+#quote5 .formss-group-inline input.long {
+    width: calc(100% - 10px);
+}
+
+#quote5 .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+}
+#quote5 .next-button a, #quote5 .back-button a {
+    text-decoration: none;
+}
+#quote5 .buttons button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#quote5 .buttons button.back {
+    background-color: transparent;
+    color: black;
+}
+
+/* quote6 sent */
+#quote6 .container {
+    background-color: #fff;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    width: 100%;
+    margin-top: 5vh;
+    margin-left: 0;
+}
+
+#quote6 .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#quote6 .message {
+    font-size: 16px;
+    color: #000;
+}
+#quote6 .message h1 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+#quote6 .message p {
+    margin: 5px 0 0 0;
+    margin-top: 3vh;
+}
+#quote6 .quote-link {
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-top: 8vh;
+}
+#quote6 .quote-link i {
+    margin-left: 5px;
 }

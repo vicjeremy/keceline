@@ -29,12 +29,10 @@
     </header>
     <div class="gr-box">  
         <div class="background">
-            <p>Get a Quote</p>
+            <p>Get Your Quote</p>
         </div>
-        <hr class="horizontal-line">
 
         <div class="container">
-            <div class="header">Get your quotes</div>
             <div class="tabs">
                 <div class="tab active">Origin and Destination</div>
                 <div class="tab active">Shipment Details</div>
@@ -42,31 +40,40 @@
                 <div class="tab">Add-Ons</div>
                 <div class="tab">Your Contact Details</div>
             </div>
-            <div class="form-group">
-            <label for="package">Package</label>
-            <select id="package">
-                <option>Select Commodity Type</option>
-            </select>
-            <label for="weight">Weight</label>
-            <input type="text" id="weight" placeholder="Weight">
-            <select>
-                <option>Kg</option>
-            </select>
-            <label for="quantity">Quantity</label>
-            <input type="text" id="quantity" placeholder="Packages">
-        </div>
-        <div class="form-group">
-            <label for="volume">Volume</label>
-            <input type="text" id="volume" placeholder="m³">
-            <span>or</span>
-            <label for="length">Size</label>
-            <input type="text" id="length" placeholder="Length">
-            <span>cm</span>
-            <input type="text" id="width" placeholder="Width">
-            <span>cm</span>
-            <input type="text" id="height" placeholder="Height">
-            <span>cm</span>
-        </div>
+            <div class="form-content">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="package">Package</label>
+                    <select id="package">
+                      <option>Select Commodity Type</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="weight">Weight</label>
+                    <input type="text" id="weight" placeholder="Weight">
+                    <span class="unit">Kg</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="text" id="quantity" placeholder="Packages">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="volume">Volume</label>
+                    <input type="text" id="volume" placeholder="m³">
+                  </div>
+                  <span class="or">or</span>
+                  <div class="form-group size-group">
+                    <label for="size">Size</label>
+                    <div class="size-inputs">
+                      <input type="text" placeholder="Length"> cm
+                      <input type="text" placeholder="Width"> cm
+                      <input type="text" placeholder="Height"> cm
+                    </div>
+                  </div>
+                </div>
+            </div>
         <div class="add-item">
             <i class="fas fa-plus-circle"></i> Add Another Item
         </div>
@@ -78,6 +85,7 @@
                 <button>Next <i class="fas fa-arrow-right"></i></button>
             </a>
         </div>
+    </div>
     </div>
 
         <div class="footer">

@@ -30,12 +30,10 @@
 
     <div class="gr-box">  
         <div class="background">
-            <p>Get a Quote</p>
+            <p>Get Your Quote</p>
         </div>
-        <hr class="horizontal-line">
 
-        <div class="container">
-            <div class="header">Get your quotes</div>
+        <div id="quote1" class="container active">
             <div class="tabs">
                 <div class="tab active">Origin and Destination</div>
                 <div class="tab">Shipment Details</div>
@@ -44,32 +42,462 @@
                 <div class="tab">Your Contact Details</div>
             </div>
             <div class="form-group">
-                <label for="from">From</label>
-                <select id="from">
-                    <option>Shanghai, China</option>
-                </select>
-                <i class="fas fa-exchange-alt swap-icon"></i>
-                <label for="to">To</label>
-                <select id="to">
-                    <option>Semarang, Indonesia</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="date">Date</label>
-                <input type="date" id="date" value="2024-02-23">
-            </div>
-            <div class="form-group">
-                <label for="method">Method</label>
-                <select id="method">
-                    <option>By Sea</option>
-                </select>
+                <div>
+                    <label for="from">From</label>
+                    <select id="from">
+                        <option>Select City, Country</option>
+                    </select>
+                </div>
+                <div class="swap-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <div>
+                    <label for="to">To</label>
+                    <select id="to">
+                        <option>Select City, Country</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="dates">Dates</label>
+                    <input type="date" id="dates" placeholder="Select Dates">
+                </div>
+                <div>
+                    <label for="service">Service</label>
+                    <select id="service">
+                        <option>Select Service</option>
+                    </select>
+                </div>
             </div>
             <div class="next-button">
-                <a href="quote_shipment.html">
-                <button>Next <i class="fas fa-arrow-right"></i></button>
-                </a>
+                <button onclick="switchTab('quote2');">Next <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
+
+        <div id="quote2" class="container ">
+            <div class="tabs">
+                <div class="tab active">Origin and Destination</div>
+                <div class="tab active">Shipment Details</div>
+                <div class="tab">Select Services</div>
+                <div class="tab">Add-Ons</div>
+                <div class="tab">Your Contact Details</div>
+            </div>
+            <div class="forms-content">
+                <div class="forms-row">
+                  <div class="forms-group">
+                    <label for="package">Package</label>
+                    <select id="package">
+                      <option>Select Commodity Type</option>
+                    </select>
+                  </div>
+                  <div class="forms-group">
+                    <label for="weight">Weight</label>
+                    <input type="text" id="weight" placeholder="Weight">
+                    <span class="unit">Kg</span>
+                  </div>
+                  <div class="forms-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="text" id="quantity" placeholder="Packages">
+                  </div>
+                </div>
+                <div class="forms-row">
+                  <div class="forms-group">
+                    <label for="volume">Volume</label>
+                    <input type="text" id="volume" placeholder="m³">
+                  </div>
+                  <span class="or">or</span>
+                  <div class="forms-group size-group">
+                    <label for="size">Size</label>
+                    <div class="size-inputs">
+                      <input type="text" placeholder="Length"> cm
+                      <input type="text" placeholder="Width"> cm
+                      <input type="text" placeholder="Height"> cm
+                    </div>
+                  </div>
+                </div>
+            </div>
+        <div class="add-item">
+            <i class="fas fa-plus-circle"></i> Add Another Item
+        </div>
+        <div class="buttons">
+                <button onclick="switchTab('quote1');" class="back"><i class="fas fa-arrow-left"></i> Back</button>
+            
+                <button onclick="switchTab('quote3');">Next <i class="fas fa-arrow-right"></i></button>
+            
+        </div>
+        </div>
+
+        <div id="quote3" class="container ">
+            <div class="tabs">
+                <div class="tab active">Origin and Destination</div>
+                <div class="tab active">Shipment Details</div>
+                <div class="tab active">Select Services</div>
+                <div class="tab">Add-Ons</div>
+                <div class="tab">Your Contact Details</div>
+            </div>
+
+            <div class="container-1">
+                <div class="header-1">
+                    <select>
+                        <option>Shipment Date</option>
+                        <option>01 Feb 2024</option>
+                    </select>
+                    <a href="#">Save Shipment</a>
+                </div>
+                <div class="summary">
+                    <h2>Summary</h2>
+                    <div class="details">
+                        <div>
+                            <p>Pieces</p>
+                            <p class="value">2</p>
+                        </div>
+                        <div>
+                            <p>Actual Weight</p>
+                            <p class="value">40 kg</p>
+                        </div>
+                        <div>
+                            <p>Total Volume</p>
+                            <p class="value">1.05 m³</p>
+                        </div>
+                        <div>
+                            <p>Est. Chargeable Weight</p>
+                            <p class="value">40 kg</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rates">
+                    <p><b>Like the rates?</b></p>
+                    <p>Sign up as a business partner today and enjoy better rates when you ship with us in weekly terms and conditions apply</p>
+                    <button>Sign Up Now</button>
+                </div>
+                <div class="services">
+                    <h3>Select Services</h3>
+                    <div class="service-item">
+                        <img alt="Service icon" height="50" src="assets\images\about\ship_quote.png" width="50" />
+                        <div class="info">
+                            <div>
+                                <p><b>Service</b></p>
+                                <p>Express</p>
+                            </div>
+                            <div>
+                                <p><b>Latest Drop Off Time</b></p>
+                                <p>Thu, 22 Feb 2024 23:59:59</p>
+                            </div>
+                            <div>
+                                <p><b>Estimated Delivery</b></p>
+                                <p>Mon, 1 April 2024</p>
+                            </div>
+                        </div>
+                        <div class="price">Starts from 1.888.000 IDR</div>
+                    </div>
+
+                    <div class="service-item">
+                        <img alt="Service icon" height="50" src="assets\images\about\ship_quote.png" width="50" />
+                        <div class="info">
+                            <div>
+                                <p><b>Service</b></p>
+                                <p>Express</p>
+                            </div>
+                            <div>
+                                <p><b>Latest Drop Off Time</b></p>
+                                <p>Thu, 22 Feb 2024 23:59:59</p>
+                            </div>
+                            <div>
+                                <p><b>Estimated Delivery</b></p>
+                                <p>Mon, 1 April 2024</p>
+                            </div>
+                        </div>
+                        <div class="price">Starts from 1.888.000 IDR</div>
+                    </div>
+
+                    <div class="service-item">
+                        <img alt="Service icon" height="50" src="assets\images\about\ship_quote.png" width="50" />
+                        <div class="info">
+                            <div>
+                                <p><b>Service</b></p>
+                                <p>Express</p>
+                            </div>
+                            <div>
+                                <p><b>Latest Drop Off Time</b></p>
+                                <p>Thu, 22 Feb 2024 23:59:59</p>
+                            </div>
+                            <div>
+                                <p><b>Estimated Delivery</b></p>
+                                <p>Mon, 1 April 2024</p>
+                            </div>
+                        </div>
+                        <div class="price">Starts from 1.888.000 IDR</div>
+                    </div>
+
+                    <div class="service-item">
+                        <img alt="Service icon" height="50" src="assets\images\about\ship_quote.png" width="50" />
+                        <div class="info">
+                            <div>
+                                <p><b>Service</b></p>
+                                <p>Express</p>
+                            </div>
+                            <div>
+                                <p><b>Latest Drop Off Time</b></p>
+                                <p>Thu, 22 Feb 2024 23:59:59</p>
+                            </div>
+                            <div>
+                                <p><b>Estimated Delivery</b></p>
+                                <p>Mon, 1 April 2024</p>
+                            </div>
+                        </div>
+                        <div class="price">Starts from 1.888.000 IDR</div>
+                    </div>
+                </div>
+                <div class="footer-1">
+                    <li>Please note that this quote is an estimate only. Price and time quoted are indicative only and might differ from the actual booking depending on the information that you provide.</li>
+                    <li>Rates shown here may be different than the actual charges for your shipment as it might not include duties, taxes, custom charges, storage fees or any other surcharges and fees.</li>
+                    <li>Log in to your account to see your account-specific rates and services.</li><br>
+                    <p>
+                        <a href="#">Email Quote</a> |
+                        <a href="#">Copy Link</a> |
+                        <a href="#">Print / Download Quote</a>
+                    </p>
+                </div>
+
+                <div class="buttons">
+                        <button onclick="switchTab('quote2');" class="back"><i class="fas fa-arrow-left"></i> Back</button>
+                    
+                        <button onclick="switchTab('quote4');">Next <i class="fas fa-arrow-right"></i></button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="quote4" class="container ">
+            <div class="tabs">
+                <div class="tab active">Origin and Destination</div>
+                <div class="tab active">Shipment Details</div>
+                <div class="tab active">Select Services</div>
+                <div class="tab active">Add-Ons</div>
+                <div class="tab">Your Contact Details</div>
+            </div>
+
+            <div class="container-1">
+                <h1>Select Add-Ons (Optional)</h1>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th class="price">Starts from</th>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input type="checkbox"></td>
+                        <td>Insurance</td>
+                        <td class="price">8.293.000 IDR</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input type="checkbox"></td>
+                        <td>Climate Impact - GoGreen</td>
+                        <td class="price">200.000 IDR</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input type="checkbox"></td>
+                        <td>Inspection Services</td>
+                        <td class="price">500.000 IDR</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input type="checkbox"></td>
+                        <td>Certifications</td>
+                        <td class="price">200.000 IDR</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input type="checkbox"></td>
+                        <td>Customs Clearance</td>
+                        <td class="price">5.533.000 IDR</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input type="checkbox"></td>
+                        <td>Trade, Logistics and Inventory</td>
+                        <td class="price">10.000.000 IDR</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input type="checkbox"></td>
+                        <td>Finance</td>
+                        <td class="price">433.000 IDR</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input type="checkbox"></td>
+                        <td>Delivery Confirmation</td>
+                        <td class="price">50.000 IDR</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input type="checkbox"></td>
+                        <td>Signature Required</td>
+                        <td class="price">80.000 IDR</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input type="checkbox"></td>
+                        <td>Additional Handling (Unusually shaped or irregular packaging)</td>
+                        <td class="price">700.000 IDR</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="buttons">
+                    <button onclick="switchTab('quote3');" class="back"><i class="fas fa-arrow-left"></i> Back</button>
+                
+                    <button onclick="switchTab('quote5');">Next <i class="fas fa-arrow-right"></i></button>
+                
+            </div>
+        </div>
+
+        <div id="quote5" class="container ">
+            <div class="tabs">
+                <div class="tab active">Origin and Destination</div>
+                <div class="tab active">Shipment Details</div>
+                <div class="tab active">Select Services</div>
+                <div class="tab active">Add-Ons</div>
+                <div class="tab active">Your Contact Details</div>
+            </div>
+
+            <div class="container-1">
+                <div class="formss-section">
+                    <h2>Shipper</h2>
+                    <div class="formss-group-1">
+                        <div class="formss-group">
+                            <label for="shipper-first-name">First Name<span style="color: red;">*</span></label>
+                            <input type="text" id="shipper-first-name">
+                        </div>
+                        <div class="formss-group">
+                            <label for="shipper-last-name">Last Name<span style="color: red;">*</span></label>
+                            <input type="text" id="shipper-last-name">
+                        </div>
+                    </div>
+                    <div class="formss-group-inline">
+                        <div class="formss-group">
+                            <label for="shipper-country-code">Country Code</label>
+                            <input type="text" id="shipper-country-code" class="long">
+                        </div>
+                        <div class="formss-group">
+                            <label for="shipper-phone">Phone</label>
+                            <input type="text" id="shipper-phone" class="long">
+                        </div>
+                        <div class="formss-group">
+                            <label for="shipper-extension">Extension</label>
+                            <input type="text" id="shipper-extension" class="long">
+                        </div>
+                    </div>
+                    <div class="formss-group">
+                        <label for="shipper-email">Email<span style="color: red;">*</span></label>
+                        <input type="email" id="shipper-email">
+                    </div>
+                    <div class="formss-group">
+                        <label for="shipper-company-name">Company Name</label>
+                        <input type="text" id="shipper-company-name">
+                    </div>
+                    <div class="formss-group">
+                        <label for="shipper-address-line-1">Address Line 1</label>
+                        <input type="text" id="shipper-address-line-1">
+                    </div>
+                    <div class="formss-group">
+                        <label for="shipper-address-line-2">Address Line 2</label>
+                        <input type="text" id="shipper-address-line-2">
+                    </div>
+                    <div class="formss-group">
+                        <label for="shipper-country">Country/Territory</label>
+                        <input type="text" id="shipper-country">
+                    </div>
+                    <div class="formss-group-inline">
+                        <div class="formss-group">
+                            <label for="shipper-city">City</label>
+                            <input type="text" id="shipper-city" class="long">
+                        </div>
+                        <div class="formss-group">
+                            <label for="shipper-state">State</label>
+                            <input type="text" id="shipper-state" class="long">
+                        </div>
+                        <div class="formss-group">
+                            <label for="shipper-postal-code">Postal Code</label>
+                            <input type="text" id="shipper-postal-code" class="long">
+                        </div>
+                    </div>
+                </div>
+                <div class="formss-section">
+                    <h2>Consignee</h2>
+                    <div class="formss-group-1">
+                        <div class="formss-group">
+                            <label for="shipper-first-name">First Name<span style="color: red;">*</span></label>
+                            <input type="text" id="shipper-first-name">
+                        </div>
+                        <div class="formss-group">
+                            <label for="shipper-last-name">Last Name<span style="color: red;">*</span></label>
+                            <input type="text" id="shipper-last-name">
+                        </div>
+                    </div>
+                    <div class="formss-group-inline">
+                        <div class="formss-group">
+                            <label for="consignee-country-code">Country Code</label>
+                            <input type="text" id="consignee-country-code" class="long">
+                        </div>
+                        <div class="formss-group">
+                            <label for="consignee-phone">Phone</label>
+                            <input type="text" id="consignee-phone" class="long">
+                        </div>
+                        <div class="formss-group">
+                            <label for="consignee-extension">Extension</label>
+                            <input type="text" id="consignee-extension" class="long">
+                        </div>
+                    </div>
+                    <div class="formss-group">
+                        <label for="consignee-email">Email<span style="color: red;">*</span></label>
+                        <input type="email" id="consignee-email">
+                    </div>
+                    <div class="formss-group">
+                        <label for="consignee-company-name">Company Name</label>
+                        <input type="text" id="consignee-company-name">
+                    </div>
+                    <div class="formss-group">
+                        <label for="consignee-address-line-1">Address Line 1</label>
+                        <input type="text" id="consignee-address-line-1">
+                    </div>
+                    <div class="formss-group">
+                        <label for="consignee-address-line-2">Address Line 2</label>
+                        <input type="text" id="consignee-address-line-2">
+                    </div>
+                    <div class="formss-group">
+                        <label for="consignee-country">Country/Territory</label>
+                        <input type="text" id="consignee-country">
+                    </div>
+                    <div class="formss-group-inline">
+                        <div class="formss-group">
+                            <label for="consignee-city">City</label>
+                            <input type="text" id="consignee-city" class="long">
+                        </div>
+                        <div class="formss-group">
+                            <label for="consignee-state">State</label>
+                            <input type="text" id="consignee-state" class="long">
+                        </div>
+                        <div class="formss-group">
+                            <label for="consignee-postal-code">Postal Code</label>
+                            <input type="text" id="consignee-postal-code" class="long">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                    <button onclick="switchTab('quote4');" class="back"><i class="fas fa-arrow-left"></i> Back</button>
+                
+                    <button onclick="switchTab('quote6');">Submit <i class="fas fa-arrow-right"></i></button>
+                
+            </div>
+        </div>
+
+        <div id="quote6" class="container ">
+            <div class="box">
+                <div class="message">
+                    <p>Thank you for your business!<br>
+                        The quote you requested has been sent to Shipper’s email.</p>
+                </div>
+                <a href="quote.html" class="quote-link">Get another Quote <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+
+    </div>
 
         <div class="footer">
             <div class="footer-col">
@@ -112,17 +540,17 @@
             <!-- Social Media Icons Positioned Horizontally -->
             <div class="footer-social">
                 <a href="#"><img src="assets\images\footer\instagram.png" alt="Instagram" height="20px" width="20px"></a>
-            <a href="#"><img src="assets\images\footer\facebook.png" alt="Facebook" height="20px" width="20px"></a>
-            <a href="#"><img src="assets\images\footer\twitterx.png" alt="X" height="16px" width="16px"></a>
-            <a href="#"><img src="assets\images\footer\linkedin.png" alt="LinkedIn" height="20px" width="20px"></a>
-            <a href="#"><img src="assets\images\footer\youtube.png" alt="YouTube" height="15px" width="20px"></a>
+                <a href="#"><img src="assets\images\footer\facebook.png" alt="Facebook" height="20px" width="20px"></a>
+                <a href="#"><img src="assets\images\footer\twitterx.png" alt="X" height="16px" width="16px"></a>
+                <a href="#"><img src="assets\images\footer\linkedin.png" alt="LinkedIn" height="20px" width="20px"></a>
+                <a href="#"><img src="assets\images\footer\youtube.png" alt="YouTube" height="15px" width="20px"></a>
             </div>
         </div>
 
        <div class="floating-button" onclick="buttonAction()">
             <i class="fas fa-comments"></i> <!-- You can replace with an SVG or Font Awesome icon -->
         </div>
-    </div>
-    </div>
 
+<script type="text/javascript" src="js/quote.js"></script>
 </body>
+</html>

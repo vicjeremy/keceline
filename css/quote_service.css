@@ -61,14 +61,14 @@ header nav ul li a {
 }
 
 .gr-box {
-    background-color: #d3d3d3;
-    background-size: cover;
-    background-position: center;
-    /*position: absolute;
-    top:90%;*/
-    top:auto;
-    height: 190vh;
-    width: 100%;
+    background: white;
+    padding: 2rem;
+    margin: 0% 6%;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+
 }
 
 .background {
@@ -76,36 +76,21 @@ header nav ul li a {
     justify-content: flex-start; 
     align-items: center; 
     height: 100px; 
-    padding: 0 20px;
+    padding: 15px 20px;
     /*position: absolute;
     bottom: 65%; 
     left: 10%; */
     padding-top: 10vh;
-    font-size: 32px; 
+    font-size: 24px; 
     color: black; 
 }
 
-.horizontal-line {
-    /*position: absolute;
-    left: 0; */
-    width: 100%; 
-    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
-    margin-top: 1vh; 
-}
-
 .container {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
     padding: 20px;
-    width: 90vw;
-    margin-top: 5vh;
-    margin-left: 5vw;
-}
-.header {
-    font-size: 18px;
-    font-weight: bold;
     margin-bottom: 20px;
+    border-radius: 15px;
+    width: auto;
 }
 .tabs {
     display: flex;
@@ -149,6 +134,7 @@ header nav ul li a {
 .header-1 select {
     padding: 5px;
     font-size: 16px;
+    border-radius: 5px;
 }
 .header-1 a {
     color: #006400;
@@ -159,6 +145,7 @@ header nav ul li a {
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
+    border-radius: 15px;
 }
 .summary h2 {
     margin: 0;
@@ -186,6 +173,7 @@ header nav ul li a {
     padding: 20px;
     margin-bottom: 20px;
     text-align: right;
+    border-radius: 15px;
 }
 .rates p {
     margin: 0 0 10px;
@@ -200,6 +188,7 @@ header nav ul li a {
     font-size: 16px;
     cursor: pointer;
     margin-left: 0vw;
+    border-radius: 5px;
 }
 .services {
     margin-bottom: 20px;
@@ -242,7 +231,7 @@ header nav ul li a {
     font-weight: bold;
 }
 .footer-1 {
-    text-align: center;
+    text-align: left;
     font-size: 12px;
     color: #666;
     margin-top: 20px;
@@ -250,6 +239,10 @@ header nav ul li a {
 .footer-1 a {
     color: #006400;
     text-decoration: none;
+}
+
+.footer-1 p{
+    text-align: center;
 }
 
 .buttons {
@@ -260,8 +253,8 @@ header nav ul li a {
     text-decoration: none;
 }
 .buttons button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: transparent;
+    color: black;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -270,7 +263,6 @@ header nav ul li a {
 .buttons button.back {
     background-color: transparent;
     color: black;
-    border: 1px solid #ddd;
 }
 
 .footer {
