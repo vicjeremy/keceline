@@ -374,9 +374,10 @@ hr {
 /* Item layanan */
 .service-item {
     display: flex;
-    flex-direction: column; /* Susun gambar dan teks secara vertikal */
-    align-items: center; /* Pusatkan gambar dan teks */
-    text-align: center; /* Teks berada di tengah */
+    flex-direction: row; /* Susun gambar dan teks secara horizontal */
+    align-items: center; /* Pusatkan gambar dan teks secara vertikal */
+    text-align: left; /* Teks sejajar di sebelah gambar */
+    gap: 1rem; /* Jarak antara gambar dan teks */
 }
 
 .service-item img {
@@ -385,14 +386,14 @@ hr {
     border-radius: 50%; /* Membuat gambar menjadi lingkaran */
     background-color: green; /* Warna latar belakang lingkaran */
     padding: 10px; /* Ruang di dalam lingkaran */
-    margin-bottom: 1rem; /* Jarak antara gambar dan teks */
+    margin-left: 20px;
 }
 
 .img-text {
     color: #000;
-    font-size: 16px; /* Ukuran teks */
-    margin-top: 0.5rem;
+    font-size: 24px; /* Ukuran teks */
 }
+
 
 /* Container utama untuk Official Networks */
 .gr-background-2 {
@@ -482,6 +483,8 @@ hr {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
+    width: 20rem;
+    height: 10rem;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
