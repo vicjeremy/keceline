@@ -72,17 +72,17 @@ header nav ul li a {
     text-align: center;
     border-radius: 10px; 
     width:123.5%;
-    height:28%;
+    height:35%;
     color: #fff; 
     position: absolute; 
-    top: 50%; 
+    top: 30%; 
     left: 0%;
     transform: translate(-50%, -50%);
 }
 
 
 .container h1 {
-    font-size: 36px;
+    font-size: 3.5rem;
     position: absolute;
     text-align: left;
     left:53%;
@@ -94,8 +94,8 @@ header nav ul li a {
     font-size: 18px;
     position: absolute;
     text-align: left;
-    left:53%;
-    top:70%;
+    left:54%;
+    top:75%;
 
     line-height: 1.6;
 }
