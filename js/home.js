@@ -8,7 +8,25 @@ function switchTab(tabId) {
     document.querySelectorAll('.content-section').forEach(section => {
         section.classList.remove('active');
     });
+    
+    // Remove active class from all tabs
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
 
+    // Show selected content section
+    document.getElementById(tabId).classList.add('active');
+
+    // Add active class to clicked tab
+    event.target.classList.add('active');
+}
+function subrs(tabId) {
+    
+    // Hide all content sections
+    document.querySelectorAll('.subs-content').forEach(section => {
+        section.classList.remove('active');
+    });
+    
     // Remove active class from all tabs
     document.querySelectorAll('.tab').forEach(tab => {
         tab.classList.remove('active');

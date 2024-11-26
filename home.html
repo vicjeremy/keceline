@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logistics Excellence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- css -->
 	<link rel="stylesheet" type="text/css" href="css/home.css">
@@ -1434,7 +1435,7 @@
 
         <!-- news 2 -->
         <div class="news-card">
-         <img alt="Shipping containers and cranes" height="200" src="assets\images\news\container.jpg" width="300"/>
+         <img alt="Shipping containers and cranes" height="200" src="assets\images\news\texas.jpg" width="300"/>
          <div class="news-content">
           <div class="news-date">
            10 NOV 2023 | SHIPMENT, LATEST NEWS
@@ -1455,7 +1456,7 @@
 
         <!-- news 3 -->
         <div class="news-card">
-            <img alt="Shipping containers and cranes" height="200" src="assets\images\news\texas.jpg" width="300"/>
+            <img alt="Shipping containers and cranes" height="200" src="assets\images\news\container.jpg" width="300"/>
             <div class="news-content">
              <div class="news-date">
               05 OCT 2024 | SHIPMENT, LATEST NEWS
@@ -1487,13 +1488,18 @@
 
 
     <!-- subcribe -->
-    <section class="subscribe">
-        <div class="subs-content">
-        <h2>Subscribe to Our Newsletter</h2>
-        <p>Always get the latest news delivered straight to your inbox.</p>
-        <input type="email" placeholder="Enter your email" />
-        <button>Subscribe</button>
-    </div>
+    <section  class="subscribe ">
+        <div id="subr1" class="subs-content active">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Always get the latest news delivered straight to your inbox.</p>
+            <input type="email" placeholder="Enter your email" />
+            <button onclick="subrs('subr2')" >Subscribe</button>
+        </div>
+        <div id="subr2" class="subs-content ">
+            <img src="assets\images\home\Subscribe-Success.png" alt="">
+            <h2>Thank you for subscribing!</h2>
+            <p>Check your inbox soon for great emails from KECELINE Group</p>
+        </div>
     </section>
 
     <!-- footer -->

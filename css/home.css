@@ -1,8 +1,4 @@
 :root {
-    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
     --green-color: #154203;
     --light-green-color: #249300;
     --grey-color: #7b7b7b;
@@ -13,7 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Helvetica Neue, var(--default-font-family);
+    font-family: 'Helvetica Neue';
 }
  
 html
@@ -1585,6 +1581,7 @@ label {
     margin-top: 2rem;
     z-index: 1;
     height: 420px;
+    
 }
 .subs-content {
     background-color: #fff;
@@ -1598,7 +1595,14 @@ label {
     text-align: center;
     border-radius: 20px;
     color: #000;
+    display: none;
 
+}
+.subs-content img {
+    height: 80px;
+}
+.subs-content.active {
+    display: block;
 }
 
 .subscribe h2 {
