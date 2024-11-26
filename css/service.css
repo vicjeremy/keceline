@@ -23,7 +23,7 @@ header {
     justify-content: left;
     align-items: center;
     padding: 0.5rem 5%;
-    gap: 2rem;
+    gap: 1.5rem;
     background-color: transparent; 
     position: fixed; 
     z-index: 1; 
