@@ -54,6 +54,7 @@ html
     text-decoration: none;
     color: var(--grey-color);
     font-size: 0.9rem;
+    font-weight: 400;
 }
 .tabs a {
     text-decoration: none;
@@ -72,6 +73,7 @@ html
     color: var(--grey-color);
     margin-left: 0;
     cursor: pointer;
+    font-weight: 400;
 }
 
 /* home */
@@ -98,11 +100,11 @@ html
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    margin-right: 10rem;
+    margin-right: 30vw;
     margin-bottom: 1rem;
     margin-top: 90px;
     margin-left: 0%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.5);
     border-radius: 0 10px 10px 0;
     color: white;
 }
@@ -112,12 +114,14 @@ html
     margin-left: 5rem;
     margin-bottom: 1rem;
     line-height: 1.2;
+    font-weight: 500;
 }
 
 .hero-text p {
     font-size: 1.2rem;
     margin-left: 5rem;
     margin-bottom: 0.5rem;
+    font-weight: 400;
 }
 
 .search-container {
