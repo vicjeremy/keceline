@@ -432,13 +432,18 @@ header nav ul li a {
     align-items: center;
     padding: 10px 20px;
     /* border: 1px solid #249300; */
-    border-radius: 5px;
+    /* border-radius: 5px; */
     text-decoration: none;
-    color: #000;
+    color: #292929;
     font-size: 1em;
-    font-weight: bold;
+    font-weight: none;
     transition: background-color 0.3s, color 0.3s;
     margin-left: 40vw;
+}
+
+.button-get-in-touch .fas fa {
+    color: #292929;
+    font-weight: none;
 }
 
 
