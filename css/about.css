@@ -435,7 +435,7 @@ header nav ul li a {
     font-size: 23px;
 }
 
-.background-pg {
+/* .background-pg {
     background-image: url('../assets/images/about/industrial.jpg');
     background-size: cover;
     background-position: center;
@@ -450,6 +450,14 @@ header nav ul li a {
 .overlay {
     text-align: center;
     color: #fff;
+}
+
+.lis-putih{
+    height: 90%;
+    width: 95%;
+    margin: auto;
+    border: 2px solid #fff;
+    transform: translate(0%, 6%);
 }
 
 .text-ab h2 {
@@ -480,6 +488,59 @@ header nav ul li a {
     font-size: 23px;
     font-weight: bold;
     margin: 0;
+} */
+
+/* Gambar latar belakang */
+.background-pg {
+    background-image: url('../assets/images/about/industrial.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    height: 80vh;
+    background-repeat: no-repeat;
+}
+
+.lis-putih{
+    height: 90%;
+    width: 95%;
+    margin: auto;
+    border: 2px solid #fff;
+    transform: translate(0%, 6%);
+}
+
+.text-ab-2 {
+    max-width: 60%;
+    color: #fff;
+    margin-left: 28%;
+    padding: 80px;
+    font-size: 40px;
+}
+
+.background-ab-21 {
+    align-items: center; 
+    color: black; 
+    margin-left: 35vw;
+    
+}
+
+.img-text-ab-33 {
+    color: #fff;
+    font-size: 14pt;
+    margin-left: -2vw;
+}
+
+.background-ab-22 {
+    align-items: center; 
+    color: black;
+    margin-left: 52vw; 
+    margin-top: -5.2rem;
+
+}
+
+.img-text-ab-4 {
+    color: #fff;
+    font-size: 14pt;
+    margin-left: -3vw;
 }
 
 
